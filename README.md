@@ -1,5 +1,4 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
-[![Unlicense License][license-shield]][license-url]
 [![Website]][Website-url]
 
 
@@ -41,9 +40,6 @@ This project is proprietary and not open source. All rights reserved.
 
 [linkedin-url]: https://www.linkedin.com/in/dawid-pionk-65983a263/
 [linkedin-shield]: https://img.shields.io/badge/LinkedIn-Profile-blue?style=plastic
-
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=plastic
-[license-url]: ./LICENSE.txt
 
 [WeatherAPI]: https://img.shields.io/badge/WeatherAPI-green?style=for-the-badge
 [WeatherAPI-url]: https://www.weatherapi.com/
