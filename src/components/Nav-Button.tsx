@@ -15,10 +15,10 @@ const NavButton: React.FC<NavButtonProps> = ({
   isActive = false,
   className = '' 
 }) => {
-  const baseStyles = 'px-4 py-1 rounded-3xl text-black bg-[#FFAFAF] border border-black max-w-[200px]';
+  const baseStyles = 'px-4 py-1 rounded-3xl border border-black max-w-[200px]';
   const activeStyles = isActive 
-    ? 'bg-blue-600 text-white' 
-    : 'text-gray-700 hover:bg-gray-100';
+    ? 'bg-[#FF5C5C] text-white' 
+    : 'text-black hover:bg-[#FF5C5C] bg-[#FFAFAF]';
 
   const buttonClasses = `${baseStyles} ${activeStyles} ${className}`;
 
