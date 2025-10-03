@@ -1,6 +1,11 @@
 import React from 'react';
+import Card from '../components/Card';
+import NavButton from '../components/Nav-Button';
+import Icon from '../components/icon';
 
 const HomePage: React.FC = () => {
+    const [activeButton, setActiveButton] = React.useState('home');
+
     return (
         <main className='grid grid-cols-5 gap-4 p-4 min-h-screen min-w-screen'>
             <div></div>
@@ -8,7 +13,17 @@ const HomePage: React.FC = () => {
                 <h1 className="text-4xl font-bold">Welcome to Louisa's Website</h1>
                 <p className="mt-2 text-lg">This is a simple website built with React and Tailwind CSS.</p>
                 <div className='grid grid-cols-3 gap-4 mt-4'>
-                    <div className='bg-black p-4 rounded shadow'>Column 1</div>
+                    <div className=' p-4 rounded shadow'>
+                        <Card title="Navigation">
+                            <div className="flex flex-col">
+                                <NavButton href="#" isActive className="mb-2 w-full text-left"><Icon name="home" className="inline-block" /> Home</NavButton>
+                                <NavButton href="#" className="mb-2 w-full text-left"><Icon name="user" className="inline-block" /> About Me</NavButton>
+                                <NavButton href="#" className="mb-2 w-full text-left"><Icon name="knit" className="inline-block" /> Knit Patterns</NavButton>
+                                <NavButton href="#" className="mb-2 w-full text-left"><Icon name="crochet" className="inline-block" /> Crochet</NavButton>
+                                <NavButton href="#" className="mb-2 w-full text-left"><Icon name="knit-crochet" className="inline-block" /> Knit & Crochet</NavButton>
+                            </div>
+                        </Card>
+                    </div>
                     <div className='bg-black p-4 rounded shadow'>Column 2</div>
                     <div className='bg-black p-4 rounded shadow'>Column 3</div>
                 </div>
