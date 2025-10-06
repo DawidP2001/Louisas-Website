@@ -23,7 +23,7 @@ const [activeButton, setActiveButton] = React.useState('home');
     <main className='min-h-screen min-w-screen'>
       <div id="contents" className="max-w-4xl mx-auto p-4 bg-[#FEF7CD]">
         <Title 
-            title="LOU1SA'S_L00PS.com" 
+            title="caillougarage" 
             subtitle="Discover my favorite knit and crochet patterns, tips, and projects!" 
             className="mb-6"
         />
