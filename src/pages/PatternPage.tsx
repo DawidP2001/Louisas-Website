@@ -8,7 +8,7 @@ interface PatternPageProps {
     setActiveButton: (button: string) => void;
 }
 
-const PatternPage: React.FC<PatternPageProps> = ({ activeButton, setActiveButton }) => {
+const PatternPage: React.FC<PatternPageProps> = ({ setActiveButton }) => {
     return (
         <main className='grid grid-cols-5 gap-4 p-4 min-h-screen min-w-screen'>
             <div></div>

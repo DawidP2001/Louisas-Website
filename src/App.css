@@ -7,7 +7,22 @@
 }
 
 body{
-  background-image: url('bg.png');
-  background-size: repeat;
+  background-image: url('patterns/2000s.webp');
+  background-size: auto;
   background-position: center;
+}
+
+.shadow-dance-text {
+    font-size: 4rem;
+    color: #f01bf0;
+    text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #0044ff;
+    animation: shadow-dance 5s infinite;
+}
+@keyframes shadow-dance {
+    0%, 100% {
+        text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #0044ff;
+    }
+    50% {
+        text-shadow: -5px -5px 0 #0044ff, -10px -10px 0 #ff005e;
+    }
 }
