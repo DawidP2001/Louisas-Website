@@ -6,8 +6,8 @@
   font-style: normal;
 }
 
-body{
-  background-image: url('patterns/2000s.webp');
+body {
+  background-image: url('patterns/kawaii2.jpg');
   background-size: auto;
   background-position: center;
 }
@@ -15,14 +15,28 @@ body{
 .shadow-dance-text {
     font-size: 4rem;
     color: #f01bf0;
-    text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #0044ff;
+    text-shadow: 5px 5px 0 #fc6ea2, 10px 10px 0 #6991ffea;
     animation: shadow-dance 5s infinite;
 }
 @keyframes shadow-dance {
     0%, 100% {
-        text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #0044ff;
+        text-shadow: 5px 5px 0 #fc6ea2, 10px 10px 0 #6991ffea;
     }
     50% {
-        text-shadow: -5px -5px 0 #0044ff, -10px -10px 0 #ff005e;
+        text-shadow: -5px -5px 0 #6991ffea, -10px -10px 0 #fc6ea2;
     }
+}
+
+.wave {
+  width: 35px; /* your image width */
+  height: 71px; /* your image height */
+  background-image: url('character/wave1.png');
+  background-size: cover;
+  animation: waving 2s steps(3) infinite;
+}
+@keyframes waving {
+  0% { background-image: url('character/wave1.png'); }
+  33% { background-image: url('character/wave2.png'); }
+  66% { background-image: url('character/wave3.png'); }
+  100% { background-image: url('character/wave1.png'); }
 }
