@@ -32,11 +32,12 @@ body {
   height: 71px; /* your image height */
   background-image: url('character/wave1.png');
   background-size: cover;
-  animation: waving 2s steps(3) infinite;
+  animation: waving 3s steps(3) infinite;
 }
 @keyframes waving {
   0% { background-image: url('character/wave1.png'); }
-  33% { background-image: url('character/wave2.png'); }
-  66% { background-image: url('character/wave3.png'); }
+  25% { background-image: url('character/wave2.png'); }
+  50% { background-image: url('character/wave1.png'); }
+  75% { background-image: url('character/wave3.png'); }
   100% { background-image: url('character/wave1.png'); }
 }
