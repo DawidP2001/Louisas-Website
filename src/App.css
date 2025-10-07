@@ -41,3 +41,41 @@ body {
   75% { background-image: url('character/wave3.png'); }
   100% { background-image: url('character/wave1.png'); }
 }
+
+
+.slider {
+  padding: 0;
+  overflow: hidden;
+  height: 300px;
+  width: 100%;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.slide-track {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 100%; /* Use full height instead of max-height */
+  width: calc(200px * 16); /* 16 images total (8 duplicated) */
+  animation: scroll 30s linear infinite;
+  background: url('patterns/kawaii.jpg');
+}
+
+.slide-track img {
+  width: 200px; /* Fixed width instead of max-width */
+  height: 100%;
+  object-fit: contain;
+  flex-shrink: 0; /* Prevent images from shrinking */
+  display: block; /* Remove any inline spacing */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 8)); /* Move exactly 8 images width */
+  }
+}
