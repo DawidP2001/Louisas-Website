@@ -52,7 +52,7 @@ const HomePage: React.FC<HomePageProps> = ({ setActiveButton }) => {
                         tips, and projects. I hope you enjoy exploring and find inspiration for your own crafting journey!
                         </p>
                 </Card>
-                <Card title="From the Blog">
+                <Card title="Updates">
                     <p className="text-justify text-black">New Blog Post: "5 Tips for Perfecting Your Knit Stitches" - Check out my latest blog post where I share my top tips for achieving flawless knit stitches every time. Whether you're a beginner or looking to refine your skills, these tips will help you take your knitting to the next level!</p>
                 </Card>
             </div>
