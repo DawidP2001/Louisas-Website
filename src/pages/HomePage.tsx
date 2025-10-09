@@ -10,7 +10,7 @@ const HomePage: React.FC<HomePageProps> = ({ setActiveButton }) => {
 
     return (
         <div className='grid grid-cols-3 gap-1 mt-4'>
-            <div className='p-1'>
+            <div className='p-1 rounded shadow'>
                 <NavigationCard setActiveButton={setActiveButton} />
                 <a href='https://www.instagram.com/caillougarage/' target="_blank" rel="noopener noreferrer">
                     <Card>
@@ -44,7 +44,7 @@ const HomePage: React.FC<HomePageProps> = ({ setActiveButton }) => {
                     </Card>
                 </a>
             </div>
-            <div className='p-1'>
+            <div className='p-1 rounded shadow'>
                 <Card title="Welcome">
                     <div className="wave text-center mx-auto"></div>
                     <p className="text-justify text-black">
@@ -53,10 +53,13 @@ const HomePage: React.FC<HomePageProps> = ({ setActiveButton }) => {
                         </p>
                 </Card>
                 <Card title="Updates">
-                    <p className="text-justify text-black">New Blog Post: "5 Tips for Perfecting Your Knit Stitches" - Check out my latest blog post where I share my top tips for achieving flawless knit stitches every time. Whether you're a beginner or looking to refine your skills, these tips will help you take your knitting to the next level!</p>
+                    <img src="h2.PNG" alt="Yarn" className="mx-auto mb-2 rounded-4xl" />
+                    <p className="text-justify text-black">
+                        I am currently working on a pattern test by the talented designer Twin_Made. You can check out their work on Instagram. Stay tuned for more updates and new patterns coming soon!
+                    </p>
                 </Card>
             </div>
-            <div className='p-1'>
+            <div className='p-1 rounded shadow'>
                 <Card title="Featured Pattern">
                     <p className='text-center text-black mb-5 text-lg' style={{marginTop: '-1rem'}}>Wales Crochet Pattern</p>
                     <img src="/gifs/Wales Crochet GIF by Twin_Made.gif" alt="Wales Crochet Pattern" className="mx-auto mb-2" />
