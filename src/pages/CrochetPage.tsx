@@ -2,12 +2,12 @@ import React from 'react';
 import Card from '../components/Card';
 import NavigationCard from '../components/NavigationCard';
 
-interface HomePageProps {
+interface CrochetPageProps {
   activeButton: string;
   setActiveButton: (button: string) => void;
 }   
 
-const HomePage: React.FC<HomePageProps> = ({ activeButton, setActiveButton }) => {
+const CrochetPage: React.FC<CrochetPageProps> = ({ activeButton, setActiveButton }) => {
 
     return (
         <div className='grid grid-cols-3 gap-1 mt-4'>
@@ -76,4 +76,4 @@ const HomePage: React.FC<HomePageProps> = ({ activeButton, setActiveButton }) =>
     );
 };
 
-export default HomePage;
+export default CrochetPage;
