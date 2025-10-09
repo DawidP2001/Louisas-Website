@@ -10,7 +10,7 @@ const HomePage: React.FC<HomePageProps> = ({ setActiveButton }) => {
 
     return (
         <div className='grid grid-cols-3 gap-1 mt-4'>
-            <div className='p-1 rounded shadow'>
+            <div className='p-1'>
                 <NavigationCard setActiveButton={setActiveButton} />
                 <a href='https://www.instagram.com/caillougarage/' target="_blank" rel="noopener noreferrer">
                     <Card>
@@ -44,7 +44,7 @@ const HomePage: React.FC<HomePageProps> = ({ setActiveButton }) => {
                     </Card>
                 </a>
             </div>
-            <div className='p-1 rounded shadow'>
+            <div className='p-1'>
                 <Card title="Welcome">
                     <div className="wave text-center mx-auto"></div>
                     <p className="text-justify text-black">
@@ -56,7 +56,7 @@ const HomePage: React.FC<HomePageProps> = ({ setActiveButton }) => {
                     <p className="text-justify text-black">New Blog Post: "5 Tips for Perfecting Your Knit Stitches" - Check out my latest blog post where I share my top tips for achieving flawless knit stitches every time. Whether you're a beginner or looking to refine your skills, these tips will help you take your knitting to the next level!</p>
                 </Card>
             </div>
-            <div className='p-1 rounded shadow'>
+            <div className='p-1'>
                 <Card title="Featured Pattern">
                     <p className='text-center text-black mb-5 text-lg' style={{marginTop: '-1rem'}}>Wales Crochet Pattern</p>
                     <img src="/gifs/Wales Crochet GIF by Twin_Made.gif" alt="Wales Crochet Pattern" className="mx-auto mb-2" />

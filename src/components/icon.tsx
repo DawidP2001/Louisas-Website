@@ -26,40 +26,27 @@ const Icon: React.FC<IconProps> = ({
     switch (name) {
       case 'home':
         return (
-          <svg className={iconClasses} fill={color} viewBox="0 0 24 24">
-            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-          </svg>
+          <img className={iconClasses} src="/icons/home.png" alt="Home Icon" />
         );
       
       case 'user':
         return (
-          <svg className={iconClasses} fill={color} viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
+          <img className={iconClasses} src="/icons/heart.png" alt="User Icon" />
         );
       
       case 'knit':
         return (
-          <svg className={iconClasses} fill={color} viewBox="0 0 24 24">
-            <path d="M3 6h2v2H3zm4 0h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2zm4 0h2v2h-2zM5 10h2v2H5zm4 0h2v2H9zm4 0h2v2h-2zm4 0h2v2h-2zM3 14h2v2H3zm4 0h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2zm4 0h2v2h-2zM5 18h2v2H5zm4 0h2v2H9zm4 0h2v2h-2zm4 0h2v2h-2z"/>
-          </svg>
+          <img className={iconClasses} src="/icons/knitting.png" alt="Knit Icon" />
         );
       
       case 'crochet':
         return (
-          <svg className={iconClasses} fill={color} viewBox="0 0 24 24">
-            <path d="M12 2L8 6h8l-4-4zM6 8v2h2v6h2v2h4v-2h2v-6h2V8H6zm2 4h8v2H8v-2z"/>
-            <circle cx="12" cy="19" r="2"/>
-          </svg>
+          <img className={iconClasses} src="/icons/crochet.png" alt="Crochet Icon" />
         );
       
       case 'knit-crochet':
         return (
-          <svg className={iconClasses} fill={color} viewBox="0 0 24 24">
-            <path d="M2 4h3v2H2zm5 0h3v2H7zm5 0h3v2h-3zm5 0h3v2h-3zM4 8h3v2H4zm5 0h3v2H9zm5 0h3v2h-3zM2 12h3v2H2zm5 0h3v2H7zm5 0h3v2h-3zm5 0h3v2h-3z"/>
-            <path d="M15 16l2-2v4l2 2h-4z"/>
-            <circle cx="19" cy="20" r="1"/>
-          </svg>
+          <img className={iconClasses} src="/icons/tools.png" alt="Knit and Crochet Icon" />
         );
       
       case 'heart':
