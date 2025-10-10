@@ -45,32 +45,30 @@ const KnitPage: React.FC<KnitPageProps> = ({ activeButton, setActiveButton }) =>
                     </Card>
                 </a>
             </div>
-            <div className='p-1 rounded shadow'>
-                <Card title="Welcome">
-                    <div className="wave text-center mx-auto"></div>
-                    <p className="text-justify text-black">
-                        Hello! I'm Louisa, and welcome to my caillougarage website. Here you'll find a collection of my favorite knit and crochet patterns, 
-                        tips, and projects. I hope you enjoy exploring and find inspiration for your own crafting journey!
-                        </p>
+            <div className='p-1 rounded shadow col-span-2 '>
+                <Card title="Knit Patterns">
+                    <div className='flex'>
+                    <input type="text" placeholder="Search patterns..." className="w-full p-2 mb-4 border rounded" />
+                    <select className="p-2 mb-4 border rounded bg-white ml-2">
+                        <option value="">Sort by...</option>
+                        <option value="difficulty-easy">Difficulty: Easy</option>
+                        <option value="difficulty-medium">Difficulty: Medium</option>
+                        <option value="difficulty-hard">Difficulty: Hard</option>
+                        <option value="name-asc">Name: A-Z</option>
+                        <option value="name-desc">Name: Z-A</option>
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+                    </div>
+                    <div className='grid grid-cols-3 gap-1'>
+                        <Card title="Cozy Knit Scarf">
+                            <img src="patterns/scarf.jpg" alt="Cozy Knit Scarf" className="mx-auto mb-2 rounded-4xl" />
+                            <p className="text-left text-black text-sm">
+                                This cozy knit scarf is perfect for chilly days. Made with soft yarn, it's both warm and stylish. The pattern is easy to follow, making it a great project for knitters of all skill levels.
+                            </p>
+                        </Card>
+                    </div>
                 </Card>
-                <Card title="Updates">
-                    <img src="h2.PNG" alt="Yarn" className="mx-auto mb-2 rounded-4xl" />
-                    <p className="text-justify text-black">
-                        I am currently working on a pattern test by the talented designer Twin_Made. You can check out their work on Instagram. Stay tuned for more updates and new patterns coming soon!
-                    </p>
-                </Card>
-            </div>
-            <div className='p-1 rounded shadow'>
-                <Card title="Featured Pattern">
-                    <p className='text-center text-black mb-5 text-lg' style={{marginTop: '-1rem'}}>Wales Crochet Pattern</p>
-                    <img src="/gifs/Wales Crochet GIF by Twin_Made.gif" alt="Wales Crochet Pattern" className="mx-auto mb-2" />
-                    <p className="text-justify text-black">Check out my latest knit pattern, the Cozy Cable Sweater! Perfect for chilly days, this sweater combines classic cables with a modern fit. Click below to view the pattern and start knitting!</p>
-                </Card>
-                <Card title="Contact me">
-                    <img src="/gifs/Phone.gif" alt="Phone" className="mx-auto mb-2" />
-                    <p className="text-justify text-black">Have questions or want to collaborate? Feel free to reach out to me via email at louisa@example.com</p>
-                </Card>
-                <a href="https://www.flaticon.com/free-icons/instagram-logo" title="instagram logo icons">Instagram logo icons created by Pixel perfect - Flaticon</a>
             </div>
         </div>
     );

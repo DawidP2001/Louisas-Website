@@ -4,12 +4,8 @@
  * author: Dawid Pionk
  * 
  * To Do: 
- * 1. Do content for welcome card
- * 2. Do content for featured pattern card
  * 3. Do content for contact me card
- * 4. Do content for instagram card
- * 5. Do content for the blog
- * 6. Do content for contact me
+ * - Do Pattern card
  */
 import './App.css'
 import HomePage from './pages/HomePage'
