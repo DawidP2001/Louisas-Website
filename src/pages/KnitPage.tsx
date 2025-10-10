@@ -1,6 +1,16 @@
+/**
+ * KnitPage.tsx
+ * Page component for displaying knit patterns and related content.
+ * author: Dawid Pionk
+ * To Do:
+ * 1. Add filtering functionality for patterns
+ * 2. Add search bar functionality
+ */
 import React from 'react';
 import Card from '../components/Card';
 import NavigationCard from '../components/NavigationCard';
+import ProductCard from '../components/ProductCard';
+import ExpandedProductCard from '../components/ExpandedProductCard';
 
 interface KnitPageProps {
   activeButton: string;
@@ -8,11 +18,18 @@ interface KnitPageProps {
 }   
 
 const KnitPage: React.FC<KnitPageProps> = ({ activeButton, setActiveButton }) => {
+    const [selected, setSelected] = React.useState('');
+    const expanded = selected ? (
+        <ExpandedProductCard name={selected} imageUrl='Knit/1.jpg'>
+            <p className="text-justify text-black">This is a detailed description of the {selected}. It includes materials needed, step-by-step instructions, and tips for best results.</p>
+        </ExpandedProductCard>
+    ) : null;
 
     return (
         <div className='grid grid-cols-3 gap-1 mt-4'>
             <div className='p-1 rounded shadow'>
                 <NavigationCard activeButton={activeButton} setActiveButton={setActiveButton} />
+                {expanded}
                 <a href='https://www.instagram.com/caillougarage/' target="_blank" rel="noopener noreferrer">
                     <Card>
                         <div className='text-center flex flex-row items-center justify-center'>
@@ -61,12 +78,14 @@ const KnitPage: React.FC<KnitPageProps> = ({ activeButton, setActiveButton }) =>
                     </select>
                     </div>
                     <div className='grid grid-cols-3 gap-1'>
-                        <Card title="Cozy Knit Scarf">
-                            <img src="patterns/scarf.jpg" alt="Cozy Knit Scarf" className="mx-auto mb-2 rounded-4xl" />
-                            <p className="text-left text-black text-sm">
-                                This cozy knit scarf is perfect for chilly days. Made with soft yarn, it's both warm and stylish. The pattern is easy to follow, making it a great project for knitters of all skill levels.
-                            </p>
-                        </Card>
+                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
+                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
+                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
+                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
+                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
+                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
+                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
+                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
                     </div>
                 </Card>
             </div>

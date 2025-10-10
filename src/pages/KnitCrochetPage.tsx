@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from '../components/Card';
 import NavigationCard from '../components/NavigationCard';
+import ProductCard from '../components/ProductCard';
+import ExpandedProductCard from '../components/ExpandedProductCard';
 
 interface KnitCrochetPageProps {
   activeButton: string;
@@ -8,11 +10,18 @@ interface KnitCrochetPageProps {
 }   
 
 const KnitCrochetPage: React.FC<KnitCrochetPageProps> = ({ activeButton, setActiveButton }) => {
-
+    const [selected, setSelected] = React.useState('');
+    const expanded = selected ? (
+        <ExpandedProductCard name={selected} imageUrl='Knit/1.jpg'>
+            <p className="text-justify text-black">This is a detailed description of the {selected}. It includes materials needed, step-by-step instructions, and tips for best results.</p>
+        </ExpandedProductCard>
+    ) : null;
+    
     return (
         <div className='grid grid-cols-3 gap-1 mt-4'>
             <div className='p-1 rounded shadow'>
                 <NavigationCard activeButton={activeButton} setActiveButton={setActiveButton} />
+                {expanded}
                 <a href='https://www.instagram.com/caillougarage/' target="_blank" rel="noopener noreferrer">
                     <Card>
                         <div className='text-center flex flex-row items-center justify-center'>
@@ -45,32 +54,31 @@ const KnitCrochetPage: React.FC<KnitCrochetPageProps> = ({ activeButton, setActi
                     </Card>
                 </a>
             </div>
-            <div className='p-1 rounded shadow'>
-                <Card title="Welcome">
-                    <div className="wave text-center mx-auto"></div>
-                    <p className="text-justify text-black">
-                        Hello! I'm Louisa, and welcome to my caillougarage website. Here you'll find a collection of my favorite knit and crochet patterns, 
-                        tips, and projects. I hope you enjoy exploring and find inspiration for your own crafting journey!
-                        </p>
+            <div className='p-1 rounded shadow col-span-2 '>
+                <Card title="Knit and Crochet Patterns">
+                    <div className='flex'>
+                    <input type="text" placeholder="Search patterns..." className="w-full p-2 mb-4 border rounded" />
+                    <select className="p-2 mb-4 border rounded bg-white ml-2">
+                        <option value="">Sort by...</option>
+                        <option value="difficulty-easy">Difficulty: Easy</option>
+                        <option value="difficulty-medium">Difficulty: Medium</option>
+                        <option value="difficulty-hard">Difficulty: Hard</option>
+                        <option value="name-asc">Name: A-Z</option>
+                        <option value="name-desc">Name: Z-A</option>
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+                    </div>
+                    <div className='grid grid-cols-3 gap-1'>
+                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
+                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
+                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
+                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
+                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
+                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
+                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
+                    </div>
                 </Card>
-                <Card title="Updates">
-                    <img src="h2.PNG" alt="Yarn" className="mx-auto mb-2 rounded-4xl" />
-                    <p className="text-justify text-black">
-                        I am currently working on a pattern test by the talented designer Twin_Made. You can check out their work on Instagram. Stay tuned for more updates and new patterns coming soon!
-                    </p>
-                </Card>
-            </div>
-            <div className='p-1 rounded shadow'>
-                <Card title="Featured Pattern">
-                    <p className='text-center text-black mb-5 text-lg' style={{marginTop: '-1rem'}}>Wales Crochet Pattern</p>
-                    <img src="/gifs/Wales Crochet GIF by Twin_Made.gif" alt="Wales Crochet Pattern" className="mx-auto mb-2" />
-                    <p className="text-justify text-black">Check out my latest knit pattern, the Cozy Cable Sweater! Perfect for chilly days, this sweater combines classic cables with a modern fit. Click below to view the pattern and start knitting!</p>
-                </Card>
-                <Card title="Contact me">
-                    <img src="/gifs/Phone.gif" alt="Phone" className="mx-auto mb-2" />
-                    <p className="text-justify text-black">Have questions or want to collaborate? Feel free to reach out to me via email at louisa@example.com</p>
-                </Card>
-                <a href="https://www.flaticon.com/free-icons/instagram-logo" title="instagram logo icons">Instagram logo icons created by Pixel perfect - Flaticon</a>
             </div>
         </div>
     );

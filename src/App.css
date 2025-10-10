@@ -90,9 +90,8 @@ body {
 .dashed {
   --b: 5px;  /* border thickness */
   --s: 30px; /* size of the dashes */
-  --c1: #215A6D;
-  --c2: #92C7A3;
-  
+  --c1: #8ddfff;
+  --c2: #ff80f4;
   aspect-ratio: 1;
   position: relative;
 }
