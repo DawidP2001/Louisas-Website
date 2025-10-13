@@ -26,27 +26,27 @@ const Icon: React.FC<IconProps> = ({
     switch (name) {
       case 'home':
         return (
-          <img className={iconClasses} src="/icons/home.png" alt="Home Icon" />
+          <img className={iconClasses} src="./icons/home.png" alt="Home Icon" />
         );
       
       case 'user':
         return (
-          <img className={iconClasses} src="/icons/heart.png" alt="User Icon" />
+          <img className={iconClasses} src="./icons/heart.png" alt="User Icon" />
         );
       
       case 'knit':
         return (
-          <img className={iconClasses} src="/icons/knitting.png" alt="Knit Icon" />
+          <img className={iconClasses} src="./icons/knitting.png" alt="Knit Icon" />
         );
       
       case 'crochet':
         return (
-          <img className={iconClasses} src="/icons/crochet.png" alt="Crochet Icon" />
+          <img className={iconClasses} src="./icons/crochet.png" alt="Crochet Icon" />
         );
       
       case 'knit-crochet':
         return (
-          <img className={iconClasses} src="/icons/tools.png" alt="Knit and Crochet Icon" />
+          <img className={iconClasses} src="./icons/tools.png" alt="Knit and Crochet Icon" />
         );
       
       case 'heart':

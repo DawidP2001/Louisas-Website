@@ -36,22 +36,22 @@ const HomePage: React.FC = () => {
                             </div>
                             <div className="slider">
                                 <div className="slide-track">
-                                    <img src="/slideshow/1.PNG" alt="Instagram 1" className="mx-auto mb-2" />
-                                    <img src="/slideshow/2.PNG" alt="Instagram 2" className="mx-auto mb-2" />
-                                    <img src="/slideshow/3.PNG" alt="Instagram 3" className="mx-auto mb-2" />
-                                    <img src="/slideshow/4.PNG" alt="Instagram 4" className="mx-auto mb-2" />
-                                    <img src="/slideshow/5.PNG" alt="Instagram 5" className="mx-auto mb-2" />
-                                    <img src="/slideshow/6.PNG" alt="Instagram 6" className="mx-auto mb-2" />
-                                    <img src="/slideshow/7.PNG" alt="Instagram 7" className="mx-auto mb-2" />
-                                    <img src="/slideshow/8.PNG" alt="Instagram 8" className="mx-auto mb-2" />
-                                    <img src="/slideshow/1.PNG" alt="Instagram 1" />
-                                    <img src="/slideshow/2.PNG" alt="Instagram 2" />
-                                    <img src="/slideshow/3.PNG" alt="Instagram 3" />
-                                    <img src="/slideshow/4.PNG" alt="Instagram 4" />
-                                    <img src="/slideshow/5.PNG" alt="Instagram 5" />
-                                    <img src="/slideshow/6.PNG" alt="Instagram 6" />
-                                    <img src="/slideshow/7.PNG" alt="Instagram 7" />
-                                    <img src="/slideshow/8.PNG" alt="Instagram 8" />
+                                    <img src="./slideshow/1.PNG" alt="Instagram 1" className="mx-auto mb-2" />
+                                    <img src="./slideshow/2.PNG" alt="Instagram 2" className="mx-auto mb-2" />
+                                    <img src="./slideshow/3.PNG" alt="Instagram 3" className="mx-auto mb-2" />
+                                    <img src="./slideshow/4.PNG" alt="Instagram 4" className="mx-auto mb-2" />
+                                    <img src="./slideshow/5.PNG" alt="Instagram 5" className="mx-auto mb-2" />
+                                    <img src="./slideshow/6.PNG" alt="Instagram 6" className="mx-auto mb-2" />
+                                    <img src="./slideshow/7.PNG" alt="Instagram 7" className="mx-auto mb-2" />
+                                    <img src="./slideshow/8.PNG" alt="Instagram 8" className="mx-auto mb-2" />
+                                    <img src="./slideshow/1.PNG" alt="Instagram 1" />
+                                    <img src="./slideshow/2.PNG" alt="Instagram 2" />
+                                    <img src="./slideshow/3.PNG" alt="Instagram 3" />
+                                    <img src="./slideshow/4.PNG" alt="Instagram 4" />
+                                    <img src="./slideshow/5.PNG" alt="Instagram 5" />
+                                    <img src="./slideshow/6.PNG" alt="Instagram 6" />
+                                    <img src="./slideshow/7.PNG" alt="Instagram 7" />
+                                    <img src="./slideshow/8.PNG" alt="Instagram 8" />
                                 </div>
                             </div>
                             <p className="text-justify text-black">Follow me on Instagram for the latest updates and behind-the-scenes looks at my crafting projects!</p>
@@ -78,11 +78,11 @@ const HomePage: React.FC = () => {
                         <div className='p-1 rounded shadow'>
                             <Card title="Featured Pattern">
                                 <p className='text-center text-black mb-5 text-lg' style={{marginTop: '-1rem'}}>Wales Crochet Pattern</p>
-                                <img src="/gifs/Wales Crochet GIF by Twin_Made.gif" alt="Wales Crochet Pattern" className="mx-auto mb-2" />
+                                <img src="./gifs/Wales Crochet GIF by Twin_Made.gif" alt="Wales Crochet Pattern" className="mx-auto mb-2" />
                                 <p className="text-justify text-black">Check out my latest knit pattern, the Cozy Cable Sweater! Perfect for chilly days, this sweater combines classic cables with a modern fit. Click below to view the pattern and start knitting!</p>
                             </Card>
                             <Card title="Contact me">
-                                <img src="/gifs/Phone.gif" alt="Phone" className="mx-auto mb-2" />
+                                <img src="./gifs/Phone.gif" alt="Phone" className="mx-auto mb-2" />
                                 <p className="text-justify text-black">Have questions or want to collaborate? Feel free to reach out to me via email at louisa@example.com</p>
                             </Card>
                             <a href="https://www.flaticon.com/free-icons/instagram-logo" title="instagram logo icons">Instagram logo icons created by Pixel perfect - Flaticon</a>
