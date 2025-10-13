@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url('./patterns/busy2.jpg');
+  background-image: url('/Louisas-Website/patterns/busy2.jpg');
   background-size: 600px;
   background-position: center;
   background-repeat: repeat;
@@ -39,16 +39,16 @@ body {
 .wave {
   width: 35px; /* your image width */
   height: 71px; /* your image height */
-  background-image: url('./character/wave1.png');
+  background-image: url('/Louisas-Website/character/wave1.png');
   background-size: cover;
   animation: waving 3s steps(3) infinite;
 }
 @keyframes waving {
-  0% { background-image: url('./character/wave1.png'); }
-  25% { background-image: url('./character/wave2.png'); }
-  50% { background-image: url('./character/wave1.png'); }
-  75% { background-image: url('./character/wave3.png'); }
-  100% { background-image: url('./character/wave1.png'); }
+  0% { background-image: url('/Louisas-Website/character/wave1.png'); }
+  25% { background-image: url('/Louisas-Website/character/wave2.png'); }
+  50% { background-image: url('/Louisas-Website/character/wave1.png'); }
+  75% { background-image: url('/Louisas-Website/character/wave3.png'); }
+  100% { background-image: url('/Louisas-Website/character/wave1.png'); }
 }
 
 
@@ -69,7 +69,7 @@ body {
   height: 100%; /* Use full height instead of max-height */
   width: calc(200px * 16); /* 16 images total (8 duplicated) */
   animation: scroll 30s linear infinite;
-  background: url('patterns/kawaii.jpg');
+  background: url('/Louisas-Website/patterns/kawaii.jpg');
 }
 
 .slide-track img {
