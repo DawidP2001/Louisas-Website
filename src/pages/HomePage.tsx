@@ -85,7 +85,6 @@ const HomePage: React.FC = () => {
                                 <img src="./gifs/Phone.gif" alt="Phone" className="mx-auto mb-2" />
                                 <p className="text-justify text-black">Have questions or want to collaborate? Feel free to reach out to me via email at louisa@example.com</p>
                             </Card>
-                            <a href="https://www.flaticon.com/free-icons/instagram-logo" title="instagram logo icons">Instagram logo icons created by Pixel perfect - Flaticon</a>
                         </div>
                     </>
                 )}
