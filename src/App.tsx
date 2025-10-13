@@ -5,6 +5,8 @@
  * 
  * To Do: 
  * - About me Page
+ * - Add functionality to product filters
+ * - Add products
  */
 import './App.css'
 import HomePage from './pages/HomePage'

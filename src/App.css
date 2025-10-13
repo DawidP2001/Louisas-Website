@@ -9,18 +9,11 @@
 body {
   background-image: url('/Louisas-Website/patterns/busy2.jpg');
   background-size: 600px;
-  background-position: center;
+  background-position: left top;
   background-repeat: repeat;
   position: relative;
 }
 
-#contents{
-  /*
-  background: url('patterns/6.jpg');
-  background-size: auto;
-  background-position: center;
-  */
-}
 .shadow-dance-text {
     font-size: 4rem;
     color: #f01bf0;
@@ -186,3 +179,4 @@ body {
 .spin-right{
   animation: spin 10s linear infinite;
 }
+

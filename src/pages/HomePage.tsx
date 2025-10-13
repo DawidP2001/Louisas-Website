@@ -6,6 +6,7 @@ import KnitCrochetPage from './KnitCrochetPage';
 import CrochetPage from './CrochetPage';
 import AboutMePage from './AboutMePage';
 import ExpandedProductCard from '../components/ExpandedProductCard';
+import { motion } from "framer-motion";
 
 const HomePage: React.FC = () => {
     const [activeButton, setActiveButton] = React.useState('home');
@@ -16,9 +17,15 @@ const HomePage: React.FC = () => {
     }, [activeButton]);
     
     const expanded = selected ? (
-    <ExpandedProductCard name={selected} imageUrl='Knit/1.jpg'>
-        <p className="text-justify text-black">This is a detailed description of the {selected}. It includes materials needed, step-by-step instructions, and tips for best results.</p>
-    </ExpandedProductCard>
+        <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, type: "spring" }}
+        >
+            <ExpandedProductCard name={selected} imageUrl='Knit/1.jpg'>
+                <p className="text-justify text-black">This is a detailed description of the {selected}. It includes materials needed, step-by-step instructions, and tips for best results.</p>
+            </ExpandedProductCard>
+        </motion.div>
 ) : null;
     return (
         <>
@@ -26,6 +33,11 @@ const HomePage: React.FC = () => {
                 <div className='p-1 rounded shadow'>
                     <NavigationCard activeButton={activeButton} setActiveButton={setActiveButton} />
                     {expanded}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.4, type: "spring" }}
+                    >
                     <a href='https://www.instagram.com/caillougarage/' target="_blank" rel="noopener noreferrer">
                         <Card>
                             <div className='text-center flex flex-row items-center justify-center'>
@@ -57,6 +69,7 @@ const HomePage: React.FC = () => {
                             <p className="text-justify text-black">Follow me on Instagram for the latest updates and behind-the-scenes looks at my crafting projects!</p>
                         </Card>
                     </a>
+                    </motion.div>
                 </div>
                 {activeButton === 'home' && (
                     <>
