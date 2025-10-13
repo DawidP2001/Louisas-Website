@@ -90,7 +90,7 @@ const HomePage: React.FC = () => {
                     </>
                 )}
                 {activeButton === 'about' && (
-                    <AboutMePage setSelected={setSelected} />
+                    <AboutMePage />
                 )}
                 {activeButton === 'knit' && (
                     <KnitPage setSelected={setSelected} />

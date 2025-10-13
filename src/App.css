@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url('patterns/busy.jpg');
+  background-image: url('patterns/busy2.jpg');
   background-size: 600px;
   background-position: center;
   background-repeat: repeat;
@@ -173,4 +173,16 @@ body {
   .button-56 {
     padding: 0 40px;
   }
+}
+
+.spin-left{
+  animation: spin-left 10s linear infinite;
+}
+@keyframes spin-left {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+.spin-right{
+  animation: spin 10s linear infinite;
 }
