@@ -7,6 +7,7 @@
  * - About me Page
  * - Add functionality to product filters
  * - Add products
+ * - Add fiverr contact link
  */
 import './App.css'
 import HomePage from './pages/HomePage'
