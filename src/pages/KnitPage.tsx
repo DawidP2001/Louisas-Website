@@ -10,12 +10,16 @@ import React from 'react';
 import Card from '../components/Card';
 import ProductCard from '../components/ProductCard';
 import { motion } from 'framer-motion';
+import { allProducts } from '../constants/ProductConstants';
 
 interface KnitPageProps {
-    setSelected: (button: string) => void;
+    setSelected: (button: number) => void;
 }   
 
 const KnitPage: React.FC<KnitPageProps> = ({ setSelected }) => {
+    const [searchTerm, setSearchTerm] = React.useState('');
+    const [sortSelected, setSortSelected] = React.useState('');
+
     return (
             <motion.div
                 className='p-1 rounded shadow col-span-2'
@@ -25,27 +29,38 @@ const KnitPage: React.FC<KnitPageProps> = ({ setSelected }) => {
             >   
                 <Card title="Knit Patterns">
                     <div className='flex'>
-                    <input type="text" placeholder="Search patterns..." className="w-full p-2 mb-4 border rounded" />
-                    <select className="p-2 mb-4 border rounded bg-white ml-2">
+                    <input 
+                        type="text" 
+                        placeholder="Search patterns..." 
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        className="w-full p-2 mb-4 border rounded" 
+                    />
+                    <select 
+                        value={sortSelected} 
+                        onChange={(e) => setSortSelected(e.target.value)}
+                        className="p-2 mb-4 border rounded bg-white ml-2"
+                    >
                         <option value="">Sort by...</option>
-                        <option value="difficulty-easy">Difficulty: Easy</option>
-                        <option value="difficulty-medium">Difficulty: Medium</option>
-                        <option value="difficulty-hard">Difficulty: Hard</option>
                         <option value="name-asc">Name: A-Z</option>
                         <option value="name-desc">Name: Z-A</option>
-                        <option value="newest">Newest First</option>
-                        <option value="oldest">Oldest First</option>
                     </select>
                     </div>
                     <div className='grid grid-cols-3 gap-1'>
-                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
-                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
-                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
-                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
-                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
-                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
-                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
-                        <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
+                        {allProducts
+                        .filter(product => product.category === "Knit")
+                        .filter(product => product.name.toLowerCase().includes(searchTerm.toLowerCase()))
+                        .sort((a, b) => {
+                            if (sortSelected === 'name-asc') return a.name.localeCompare(b.name);
+                            if (sortSelected === 'name-desc') return b.name.localeCompare(a.name);
+                            return 0;
+                        })
+                        .map(product => (
+                            <button key={product.id} onClick={() => setSelected(product.id)}>
+                                <ProductCard name={product.name} imageUrl={product.imageUrl} />
+                            </button>
+                        ))
+                    }
                     </div>
                 </Card>
             </motion.div>

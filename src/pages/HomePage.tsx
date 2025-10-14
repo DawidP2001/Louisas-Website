@@ -10,10 +10,10 @@ import { motion } from "framer-motion";
 
 const HomePage: React.FC = () => {
     const [activeButton, setActiveButton] = React.useState('home');
-    const [selected, setSelected] = React.useState('');
+    const [selected, setSelected] = React.useState<number | null>(null);
     
     React.useEffect(() => {
-        setSelected('');
+        setSelected(null);
     }, [activeButton]);
     
     const expanded = selected ? (
@@ -22,9 +22,7 @@ const HomePage: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 2, type: "spring" }}
         >
-            <ExpandedProductCard name={selected} imageUrl='Knit/1.jpg'>
-                <p className="text-justify text-black">This is a detailed description of the {selected}. It includes materials needed, step-by-step instructions, and tips for best results.</p>
-            </ExpandedProductCard>
+            <ExpandedProductCard id={selected} />
         </motion.div>
 ) : null;
     return (
