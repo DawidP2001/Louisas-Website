@@ -8,11 +8,17 @@
  */
 import React from 'react';
 import Card from '../components/Card';
+import { motion } from 'framer-motion';
 
 const AboutMePage: React.FC = () => {
 
     return (
-        <div className='p-1 rounded shadow col-span-2 '>
+        <motion.div
+        className='p-1 rounded shadow col-span-2'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, type: "spring" }}
+        >
             <Card title="Louisa's Story">
                 <div className='text-black text-left'>
                     <img 
@@ -45,8 +51,7 @@ const AboutMePage: React.FC = () => {
             <Card title="Fun Facts">
                 <p className='text-black text-left'>I draw inspiration from nature, art, and everyday life, which fuels my creativity and drives me to explore new patterns and styles. My goal is to share my knowledge and passion with others through this website, providing a space where fellow crochet enthusiasts can find inspiration, learn new techniques, and connect with a like-minded community. Whether you're a beginner or an experienced crocheter, I hope you'll find something here that sparks your creativity and encourages you to embark on your own crochet journey.</p>
             </Card>
-        
-        </div>
+        </motion.div>
     );
 };
 

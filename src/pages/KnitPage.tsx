@@ -9,6 +9,7 @@
 import React from 'react';
 import Card from '../components/Card';
 import ProductCard from '../components/ProductCard';
+import { motion } from 'framer-motion';
 
 interface KnitPageProps {
     setSelected: (button: string) => void;
@@ -16,7 +17,12 @@ interface KnitPageProps {
 
 const KnitPage: React.FC<KnitPageProps> = ({ setSelected }) => {
     return (
-            <div className='p-1 rounded shadow col-span-2 '>
+            <motion.div
+                className='p-1 rounded shadow col-span-2'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, type: "spring" }}
+            >   
                 <Card title="Knit Patterns">
                     <div className='flex'>
                     <input type="text" placeholder="Search patterns..." className="w-full p-2 mb-4 border rounded" />
@@ -42,7 +48,7 @@ const KnitPage: React.FC<KnitPageProps> = ({ setSelected }) => {
                         <button onClick={() => setSelected('Cozy Knit Scarf')}><ProductCard name="Cozy Knit Scarf" imageUrl='Knit/1.jpg' /></button>
                     </div>
                 </Card>
-            </div>
+            </motion.div>
     );
 };
 

@@ -72,7 +72,12 @@ const HomePage: React.FC = () => {
                     </motion.div>
                 </div>
                 {activeButton === 'home' && (
-                    <>
+                    <motion.div
+                            className='p-1 rounded shadow col-span-2 grid grid-cols-2 gap-1'
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1, type: "spring" }}
+                        >
                         <div className='p-1 rounded shadow'>
                             <Card title="Welcome">
                                 <div className="wave text-center mx-auto"></div>
@@ -99,7 +104,7 @@ const HomePage: React.FC = () => {
                                 <p className="text-justify text-black">Have questions or want to collaborate? Feel free to reach out to me via email at louisa@example.com</p>
                             </Card>
                         </div>
-                    </>
+                    </motion.div>
                 )}
                 {activeButton === 'about' && (
                     <AboutMePage />
