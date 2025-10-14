@@ -15,8 +15,8 @@ const AboutMePage: React.FC = () => {
     return (
         <motion.div
         className='p-1 rounded shadow col-span-2'
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, type: "spring" }}
         >
             <Card title="Louisa's Story">

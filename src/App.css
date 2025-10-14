@@ -168,15 +168,11 @@ body {
   }
 }
 
-.spin-left{
-  animation: spin-left 10s linear infinite;
+.rock-back-and-forth {
+  animation: rock 3s steps(3) infinite;
 }
-@keyframes spin-left {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(-360deg); }
+@keyframes rock {
+  0% { transform: rotate(0); }
+  50% { transform: rotate(90deg); }
+  100% { transform: rotate(270deg); }
 }
-
-.spin-right{
-  animation: spin 10s linear infinite;
-}
-
