@@ -20,7 +20,7 @@ const KnitCrochetPage: React.FC<KnitCrochetPageProps> = ({ setSelected }) => {
     
     return (
             <motion.div
-                className='p-1 rounded shadow col-span-2'
+                className='p-1 col-span-2'
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, type: "spring" }}

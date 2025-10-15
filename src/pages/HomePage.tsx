@@ -11,9 +11,11 @@ import { motion } from "framer-motion";
 const HomePage: React.FC = () => {
     const [activeButton, setActiveButton] = React.useState('home');
     const [selected, setSelected] = React.useState<number | null>(null);
+    const [expandedCardActive, setExpandedCardActive] = React.useState(false);
     
     React.useEffect(() => {
         setSelected(null);
+        
     }, [activeButton]);
     
     const expanded = selected ? (
@@ -28,7 +30,7 @@ const HomePage: React.FC = () => {
     return (
         <>
             <div className='grid grid-cols-3 gap-1 mt-4'>
-                <div className='p-1 rounded shadow'>
+                <div className='p-1'>
                     <NavigationCard activeButton={activeButton} setActiveButton={setActiveButton} />
                     {expanded}
                     <motion.div
@@ -71,12 +73,12 @@ const HomePage: React.FC = () => {
                 </div>
                 {activeButton === 'home' && (
                     <motion.div
-                            className='p-1 rounded shadow col-span-2 grid grid-cols-2 gap-1'
+                            className='p-1 rounded col-span-2 grid grid-cols-2 gap-1'
                             initial={{ opacity: 0, y: 100 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, type: "spring" }}
                         >
-                        <div className='p-1 rounded shadow'>
+                        <div className='p-1'>
                             <Card title="Welcome">
                                 <div className="wave text-center mx-auto"></div>
                                 <p className="text-justify text-black">
@@ -91,7 +93,7 @@ const HomePage: React.FC = () => {
                                 </p>
                             </Card>
                         </div>
-                        <div className='p-1 rounded shadow'>
+                        <div className='p-1'>
                             <Card title="Featured Pattern">
                                 <p className='text-center text-black mb-5 text-lg' style={{marginTop: '-1rem'}}>Wales Crochet Pattern</p>
                                 <img src="./gifs/Wales Crochet GIF by Twin_Made.gif" alt="Wales Crochet Pattern" className="mx-auto mb-2" />

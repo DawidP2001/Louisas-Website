@@ -6,6 +6,7 @@ import { allProducts } from '../constants/ProductConstants';
 
 interface CrochetPageProps {
   setSelected: (button: number) => void;
+  setExpandedCardActive: (active: boolean) => void;
 }   
 
 const CrochetPage: React.FC<CrochetPageProps> = ({ setSelected }) => {
@@ -14,7 +15,7 @@ const CrochetPage: React.FC<CrochetPageProps> = ({ setSelected }) => {
 
     return (
         <motion.div
-        className='p-1 rounded shadow col-span-2'
+        className='p-1 col-span-2'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, type: "spring" }}
@@ -48,7 +49,7 @@ const CrochetPage: React.FC<CrochetPageProps> = ({ setSelected }) => {
                             return 0;
                         })
                         .map(product => (
-                            <button key={product.id} onClick={() => setSelected(product.id)}>
+                            <button key={product.id} onClick={() => {setSelected(product.id); setExpandedCardActive(true);}}>
                                 <ProductCard name={product.name} imageUrl={product.imageUrl} />
                             </button>
                         ))

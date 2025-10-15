@@ -14,7 +14,7 @@ const AboutMePage: React.FC = () => {
 
     return (
         <motion.div
-        className='p-1 rounded shadow col-span-2'
+        className='p-1 rounded col-span-2'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, type: "spring" }}
@@ -33,17 +33,17 @@ const AboutMePage: React.FC = () => {
                 <div className='grid grid-cols-3 gap-3'>
                     <a className='hover:scale-110 transition-transform duration-300 cursor-pointer' href='https://www.instagram.com/p/CubiFDvrNgp/?img_index=1'>
                         <p className='text-black text-left text-lg'>Sock Warmers</p>
-                        <img src='./Crochet/Sock-Warmers.png' className="border rounded-lg" alt="Sock Warmers" />
+                        <img src='./Crochet/leg-warmers.png' className="border rounded-lg" alt="Sock Warmers" />
                         <p>These are really cute ankle warming accessories that I love making!</p>
                     </a>
                     <a className='hover:scale-110 transition-transform duration-300 cursor-pointer' href='https://www.instagram.com/p/CubiFDvrNgp/?img_index=1'>
                         <p className='text-black text-left text-lg'>Hat</p>
-                        <img src='./Crochet/Sock-Warmers.png' className="border rounded-lg" alt="Hat" />
+                        <img src='./Crochet/leg-warmers.png' className="border rounded-lg" alt="Hat" />
                         <p>These are really cute ankle warming accessories that I love making!</p>
                     </a>
                     <a className='hover:scale-110 transition-transform duration-300 cursor-pointer' href='https://www.instagram.com/p/CubiFDvrNgp/?img_index=1'>
                         <p className='text-black text-left text-lg'>Sock Warmers</p>
-                        <img src='./Crochet/Sock-Warmers.png' className="border rounded-lg" alt="Sock Warmers" />
+                        <img src='./Crochet/leg-warmers.png' className="border rounded-lg" alt="Sock Warmers" />
                         <p className='text-md'>These are really cute ankle warming accessories that I love making!</p>
                     </a>
                 </div>
