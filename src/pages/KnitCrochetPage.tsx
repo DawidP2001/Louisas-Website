@@ -12,18 +12,19 @@ import { motion } from 'framer-motion';
 
 interface KnitCrochetPageProps {
   setSelected: (button: number) => void;
+  setExpandedCardActive: (active: boolean) => void;
 }   
 
-const KnitCrochetPage: React.FC<KnitCrochetPageProps> = ({ setSelected }) => {
+const KnitCrochetPage: React.FC<KnitCrochetPageProps> = ({ setSelected, setExpandedCardActive }) => {
     const [searchTerm, setSearchTerm] = React.useState('');
     const [sortSelected, setSortSelected] = React.useState('');
     
     return (
             <motion.div
                 className='p-1 col-span-2'
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, type: "spring" }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, type: "spring" }}
             >   
                 <Card title="Knit and Crochet Patterns">
                     <div className='flex'>

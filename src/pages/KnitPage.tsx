@@ -14,18 +14,19 @@ import { allProducts } from '../constants/ProductConstants';
 
 interface KnitPageProps {
     setSelected: (button: number) => void;
+    setExpandedCardActive: (active: boolean) => void;
 }   
 
-const KnitPage: React.FC<KnitPageProps> = ({ setSelected }) => {
+const KnitPage: React.FC<KnitPageProps> = ({ setSelected, setExpandedCardActive }) => {
     const [searchTerm, setSearchTerm] = React.useState('');
     const [sortSelected, setSortSelected] = React.useState('');
 
     return (
             <motion.div
                 className='p-1 col-span-2'
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, type: "spring" }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, type: "spring" }}
             >   
                 <Card title="Knit Patterns">
                     <div className='flex'>
@@ -56,7 +57,7 @@ const KnitPage: React.FC<KnitPageProps> = ({ setSelected }) => {
                             return 0;
                         })
                         .map(product => (
-                            <button key={product.id} onClick={() => setSelected(product.id)}>
+                            <button key={product.id} onClick={() => {setSelected(product.id); setExpandedCardActive(true);}}>
                                 <ProductCard name={product.name} imageUrl={product.imageUrl} />
                             </button>
                         ))

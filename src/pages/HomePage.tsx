@@ -13,16 +13,25 @@ const HomePage: React.FC = () => {
     const [selected, setSelected] = React.useState<number | null>(null);
     const [expandedCardActive, setExpandedCardActive] = React.useState(false);
     
+    // Function to handle setting the expanded card active state
+    const handleSetExpandedCardActive = (active: boolean) => {
+        if (!expandedCardActive && active) {
+          //  const instaCard = document.querySelector('.instagram-card');
+        }
+        setExpandedCardActive(active);
+    };
+
     React.useEffect(() => {
         setSelected(null);
+        setExpandedCardActive(false);
         
     }, [activeButton]);
     
     const expanded = selected ? (
         <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2, type: "spring" }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, type: "spring" }}
         >
             <ExpandedProductCard id={selected} />
         </motion.div>
@@ -31,16 +40,34 @@ const HomePage: React.FC = () => {
         <>
             <div className='grid grid-cols-3 gap-1 mt-4'>
                 <div className='p-1'>
-                    <NavigationCard activeButton={activeButton} setActiveButton={setActiveButton} />
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, type: "spring" }}
+                    >
+                        <NavigationCard activeButton={activeButton} setActiveButton={setActiveButton} />
+                    </motion.div>
                     {expanded}
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.4, type: "spring" }}
+                        layout
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ 
+                            opacity: 1, 
+                            scale: 1,
+                            y: 0 // Slide down when expanded card is active
+                        }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        transition={{
+                            type: "spring", 
+                            stiffness: 300, 
+                            damping: 25,
+                            y: { duration: 2, ease: "easeInOut" } // Smooth slide animation
+                        }}
+                        className=' instagram-card'
                     >
                     <a href='https://www.instagram.com/caillougarage/' target="_blank" rel="noopener noreferrer">
                         <Card>
-                            <div className='text-center flex flex-row items-center justify-center'>
+                            <div className="text-center flex flex-row items-center justify-center">
                                 <img src='icons/instagram.png' alt="Instagram Icon" className="mx-auto mb-2 w-12" />
                                 <h3 className="text-lg text-center mb-4 press-start-2p-regular" style={{ color: 'black' }}>
                                     Instagram
@@ -74,9 +101,9 @@ const HomePage: React.FC = () => {
                 {activeButton === 'home' && (
                     <motion.div
                             className='p-1 rounded col-span-2 grid grid-cols-2 gap-1'
-                            initial={{ opacity: 0, y: 100 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, type: "spring" }}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.6, type: "spring" }}
                         >
                         <div className='p-1'>
                             <Card title="Welcome">
@@ -110,13 +137,13 @@ const HomePage: React.FC = () => {
                     <AboutMePage />
                 )}
                 {activeButton === 'knit' && (
-                    <KnitPage setSelected={setSelected} />
+                    <KnitPage setSelected={setSelected} setExpandedCardActive={handleSetExpandedCardActive} />
                 )}
                 {activeButton === 'crochet' && (
-                    <CrochetPage setSelected={setSelected} />
+                    <CrochetPage setSelected={setSelected} setExpandedCardActive={handleSetExpandedCardActive}/>
                 )}
                 {activeButton === 'knit-crochet' && (
-                    <KnitCrochetPage setSelected={setSelected} />
+                    <KnitCrochetPage setSelected={setSelected} setExpandedCardActive={handleSetExpandedCardActive}/>
                 )}
             </div>
         </>

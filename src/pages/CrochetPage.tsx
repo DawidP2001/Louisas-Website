@@ -9,16 +9,16 @@ interface CrochetPageProps {
   setExpandedCardActive: (active: boolean) => void;
 }   
 
-const CrochetPage: React.FC<CrochetPageProps> = ({ setSelected }) => {
+const CrochetPage: React.FC<CrochetPageProps> = ({ setSelected, setExpandedCardActive }) => {
     const [searchTerm, setSearchTerm] = React.useState('');
     const [sortSelected, setSortSelected] = React.useState('');
 
     return (
         <motion.div
-        className='p-1 col-span-2'
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, type: "spring" }}
+            className='p-1 col-span-2'
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, type: "spring" }}
         >
             <Card title="Crochet Patterns">
                 <div className='flex'>

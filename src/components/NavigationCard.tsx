@@ -6,11 +6,12 @@ import Icon from './icon';
 interface NavigationCardProps {
   activeButton: string;
   setActiveButton: (button: string) => void;
+  className?: string;
 }
 
-const NavigationCard: React.FC<NavigationCardProps> = ({ activeButton, setActiveButton }) => {
+const NavigationCard: React.FC<NavigationCardProps> = ({ activeButton, setActiveButton, className='' }) => {
   return (
-    <Card title="Navigation">
+    <Card title="Navigation" className={`navigation-card ${className}`}>
       <div className="flex flex-col items-center">
         <NavButton onClick={() => setActiveButton('home')} isActive={activeButton === 'home'} className="mb-2 w-full text-left">
           <Icon name="home" className="inline-block mr-2" /> Home

@@ -4,10 +4,10 @@
  * author: Dawid Pionk
  * 
  * To Do: 
- * - About me Page
- * - Add functionality to product filters
- * - Add products
  * - Add fiverr contact link
+ * - Add more animations
+ * - Change the size too big atm
+ * - Add mobile responsiveness
  */
 import './App.css'
 import HomePage from './pages/HomePage'
