@@ -1,11 +1,11 @@
 import React from 'react';
-import Card from '../components/Card';
-import NavigationCard from '../components/NavigationCard';
-import KnitPage from './KnitPage';
-import KnitCrochetPage from './KnitCrochetPage';
-import CrochetPage from './CrochetPage';
-import AboutMePage from './AboutMePage';
-import ExpandedProductCard from '../components/ExpandedProductCard';
+import Card from '../../components/Card';
+import NavigationCard from '../../components/NavigationCard';
+import KnitPage from '../KnitPage';
+import KnitCrochetPage from '../KnitCrochetPage';
+import CrochetPage from '../CrochetPage';
+import AboutMePage from '../AboutMePage';
+import ExpandedProductCard from '../../components/ExpandedProductCard';
 import { motion } from "framer-motion";
 
 const HomePage: React.FC = () => {

@@ -12,10 +12,11 @@ body {
   background-position: left top;
   background-repeat: repeat;
   position: relative;
+  overflow-x: hidden;
 }
 
+
 .shadow-dance-text {
-    font-size: 4rem;
     color: #f01bf0;
     text-shadow: 5px 5px 0 #fc6ea2, 10px 10px 0 #6991ffea;
     animation: shadow-dance 5s infinite;
@@ -116,12 +117,11 @@ body {
   cursor: pointer;
   display: flex;
   font-family: Inter,sans-serif;
-  font-size: 16px;
-  height: 40px;
+  font-size: 14px;
+  height: 32px;
   justify-content: center;
   line-height: 24px;
   max-width: 100%;
-  padding: 0 25px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -135,7 +135,7 @@ body {
   border-radius: 8px;
   content: "";
   display: block;
-  height: 48px;
+  height: 40px;
   left: 0;
   width: 100%;
   position: absolute;
@@ -164,7 +164,9 @@ body {
 
 @media (min-width: 768px) {
   .button-56 {
-    padding: 0 40px;
+    padding: 0 0px;
+    font-size: 16px;
+    height: 40px;
   }
 }
 
@@ -175,4 +177,8 @@ body {
   0% { transform: rotate(0); }
   50% { transform: rotate(90deg); }
   100% { transform: rotate(270deg); }
+}
+
+#contents{
+
 }
