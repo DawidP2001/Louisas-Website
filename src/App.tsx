@@ -6,8 +6,11 @@
  * To Do: 
  * - Add fiverr contact link
  * - Add more animations
- * - Change the size too big atm
  * - Add mobile responsiveness
+ * - Do mobile about me page
+ * - Do mobile Knitting page
+ * - Do mobile Crochet page
+ * - Do mobile knnit and crochet page
  */
 import './App.css'
 import Title from './components/Title';

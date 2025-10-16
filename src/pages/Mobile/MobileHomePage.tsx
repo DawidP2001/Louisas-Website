@@ -87,7 +87,7 @@ const HomePage: React.FC<MobileHomePageProps> = ({ className }) => {
                                 <img src="./slideshow/7.PNG" alt="Instagram 7" className="mx-auto mb-2" />
                                 <img src="./slideshow/8.PNG" alt="Instagram 8" className="mx-auto mb-2" />
                                 <img src="./slideshow/1.PNG" alt="Instagram 1" />
-                                <img src="./slideshow/2.PNG" alt="Instagram 2" />
+                                <img src="./slideshow/2.PNG" alt="Instagram 2" className="mx-auto mb-2" />
                                 <img src="./slideshow/3.PNG" alt="Instagram 3" />
                                 <img src="./slideshow/4.PNG" alt="Instagram 4" />
                                 <img src="./slideshow/5.PNG" alt="Instagram 5" />
@@ -100,8 +100,9 @@ const HomePage: React.FC<MobileHomePageProps> = ({ className }) => {
                     </Card>
                 </a>
                 </motion.div>
-                <motion.div
-                        className=''
+                {activeButton === 'home' && (
+                    <motion.div
+                        className=""
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, type: "spring" }}
@@ -112,7 +113,8 @@ const HomePage: React.FC<MobileHomePageProps> = ({ className }) => {
                                 I am currently working on a pattern test by the talented designer Twin_Made. You can check out their work on Instagram. Stay tuned for more updates and new patterns coming soon!
                             </p>
                         </Card>
-                </motion.div>
+                    </motion.div>
+                )}
             </div>
             {activeButton === 'home' && (
                 <>
