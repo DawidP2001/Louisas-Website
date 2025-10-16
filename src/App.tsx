@@ -10,9 +10,10 @@
  * - Add mobile responsiveness
  */
 import './App.css'
-import HomePage from './pages/HomePage'
 import Title from './components/Title';
 import Footer from './components/Footer';
+import DesktopHomePage from './pages/Desktop/DesktopHomePage';
+import MobileHomePage from './pages/Mobile/MobileHomePage';
 
 function App() {
   return (
@@ -26,7 +27,9 @@ function App() {
             subtitle="Discover my favorite knit and crochet patterns, tips, and projects!" 
             className="mb-1"
         />
-        <HomePage />
+        <DesktopHomePage className='hidden md:block'/>
+        <MobileHomePage className="block md:hidden" />
+
         <Footer />
       </div>
     </main>
