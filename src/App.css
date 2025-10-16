@@ -49,10 +49,8 @@ body {
 .slider {
   padding: 0;
   overflow: hidden;
-  height: 300px;
-  width: 100%;
   border: 1px solid black;
-  margin-bottom: 20px;
+  height: 100px;
 }
 
 .slide-track {
@@ -61,17 +59,18 @@ body {
   display: flex;
   align-items: center;
   height: 100%; /* Use full height instead of max-height */
-  width: calc(200px * 16); /* 16 images total (8 duplicated) */
-  animation: scroll 30s linear infinite;
+  width: calc(90px * 16); /* 16 images total (8 duplicated) */
+  animation: scroll 20s linear infinite;
   background: url('/Louisas-Website/patterns/kawaii.jpg');
 }
 
 .slide-track img {
-  width: 200px; /* Fixed width instead of max-width */
-  height: 100%;
+  margin-top: 10px;
+  width: 80px;
   object-fit: contain;
-  flex-shrink: 0; /* Prevent images from shrinking */
+  flex-shrink: 1; /* Prevent images from shrinking */
   display: block; /* Remove any inline spacing */
+  border: 1px solid #000000;
 }
 
 @keyframes scroll {
@@ -79,7 +78,7 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-200px * 8)); /* Move exactly 8 images width */
+    transform: translateX(calc(-90px * 8)); /* Move exactly 8 images width */
   }
 }
 
@@ -117,7 +116,7 @@ body {
   cursor: pointer;
   display: flex;
   font-family: Inter,sans-serif;
-  font-size: 14px;
+  font-size: 10px;
   height: 32px;
   justify-content: center;
   line-height: 24px;
@@ -167,6 +166,26 @@ body {
     padding: 0 0px;
     font-size: 16px;
     height: 40px;
+  }
+  .slider img {
+    width: 200px; /* Fixed width instead of max-width */
+    height: 100%;
+  }
+  .slider-track {
+    width: calc(200px * 16); /* 16 images total (8 duplicated) */
+  }
+  .slider {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-200px * 8)); /* Move exactly 8 images width */
+    }
   }
 }
 

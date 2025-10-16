@@ -13,9 +13,9 @@ const Title: React.FC<TitleProps> = ({
 }) => {
   return (
     <div className={`text-center ${className}`}>
-      <h1 
-        className="md:text-4xl text-xl font-bold shadow-dance-text"
-      >{title}</h1>
+      <p 
+        className="md:text-4xl text-[40px] font-bold shadow-dance-text"
+      >{title}</p>
       <p className="text-black mt-2 text-lg">{subtitle}</p>
     </div>
   );

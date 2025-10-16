@@ -30,8 +30,8 @@ function App() {
             subtitle="Discover my favorite knit and crochet patterns, tips, and projects!" 
             className="mb-1"
         />
-        <DesktopHomePage className='hidden md:block'/>
-        <MobileHomePage className="block md:hidden" />
+        <DesktopHomePage className='hidden md:grid'/>
+        <MobileHomePage className="grid md:hidden" />
 
         <Footer />
       </div>

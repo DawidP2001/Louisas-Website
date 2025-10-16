@@ -4,7 +4,7 @@ import NavigationCard from '../../components/NavigationCard';
 import KnitPage from '../KnitPage';
 import KnitCrochetPage from '../KnitCrochetPage';
 import CrochetPage from '../CrochetPage';
-import AboutMePage from '../AboutMePage';
+import AboutMePage from './MobileAboutMePage';
 import ExpandedProductCard from '../../components/ExpandedProductCard';
 import { motion } from "framer-motion";
 
@@ -42,82 +42,79 @@ const HomePage: React.FC<MobileHomePageProps> = ({ className }) => {
 ) : null;
     return (
         <div className={`grid grid-cols-2 md:grid-cols-3 gap-1 mt-4 ` + (className ? className : '')}>
-            <div className='p-1'>
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, type: "spring" }}
-                >
-                    <NavigationCard activeButton={activeButton} setActiveButton={setActiveButton} />
-                </motion.div>
-                {expanded}
-                <motion.div
-                    layout
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ 
-                        opacity: 1, 
-                        scale: 1,
-                        y: 0 // Slide down when expanded card is active
-                    }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                    transition={{
-                        type: "spring", 
-                        stiffness: 300, 
-                        damping: 25,
-                        y: { duration: 2, ease: "easeInOut" } // Smooth slide animation
-                    }}
-                    className=' instagram-card'
-                >
-                <a href='https://www.instagram.com/caillougarage/' target="_blank" rel="noopener noreferrer">
-                    <Card>
-                        <div className="text-center flex flex-row items-center justify-center">
-                            <img src='icons/instagram.png' alt="Instagram Icon" className="mx-auto mb-2 mt-[-6px] w-8 md:w-12" />
-                            <h3 className="md:text-lg text-xs text-center mb-4 press-start-2p-regular" style={{ color: 'black' }}>
-                                Instagram
-                            </h3>
-                        </div>
-                        <div className="slider">
-                            <div className="slide-track">
-                                <img src="./slideshow/1.PNG" alt="Instagram 1" className="mx-auto mb-2" />
-                                <img src="./slideshow/2.PNG" alt="Instagram 2" className="mx-auto mb-2" />
-                                <img src="./slideshow/3.PNG" alt="Instagram 3" className="mx-auto mb-2" />
-                                <img src="./slideshow/4.PNG" alt="Instagram 4" className="mx-auto mb-2" />
-                                <img src="./slideshow/5.PNG" alt="Instagram 5" className="mx-auto mb-2" />
-                                <img src="./slideshow/6.PNG" alt="Instagram 6" className="mx-auto mb-2" />
-                                <img src="./slideshow/7.PNG" alt="Instagram 7" className="mx-auto mb-2" />
-                                <img src="./slideshow/8.PNG" alt="Instagram 8" className="mx-auto mb-2" />
-                                <img src="./slideshow/1.PNG" alt="Instagram 1" />
-                                <img src="./slideshow/2.PNG" alt="Instagram 2" className="mx-auto mb-2" />
-                                <img src="./slideshow/3.PNG" alt="Instagram 3" />
-                                <img src="./slideshow/4.PNG" alt="Instagram 4" />
-                                <img src="./slideshow/5.PNG" alt="Instagram 5" />
-                                <img src="./slideshow/6.PNG" alt="Instagram 6" />
-                                <img src="./slideshow/7.PNG" alt="Instagram 7" />
-                                <img src="./slideshow/8.PNG" alt="Instagram 8" />
-                            </div>
-                        </div>
-                        <p className="">Follow me on Instagram for the latest updates and behind-the-scenes looks at my crafting projects!</p>
-                    </Card>
-                </a>
-                </motion.div>
-                {activeButton === 'home' && (
-                    <motion.div
-                        className=""
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, type: "spring" }}
-                    >
-                        <Card title="Updates">
-                            <img src="h2.PNG" alt="Yarn" className="mx-auto mb-2 rounded-4xl" />
-                            <p className="">
-                                I am currently working on a pattern test by the talented designer Twin_Made. You can check out their work on Instagram. Stay tuned for more updates and new patterns coming soon!
-                            </p>
-                        </Card>
-                    </motion.div>
-                )}
-            </div>
             {activeButton === 'home' && (
                 <>
+                    <div className='p-1'>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.6, type: "spring" }}
+                        >
+                            <NavigationCard activeButton={activeButton} setActiveButton={setActiveButton} />
+                        </motion.div>
+                        <motion.div
+                            layout
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ 
+                                opacity: 1, 
+                                scale: 1,
+                                y: 0 // Slide down when expanded card is active
+                            }}
+                            exit={{ opacity: 0, scale: 0.8 }}
+                            transition={{
+                                type: "spring", 
+                                stiffness: 300, 
+                                damping: 25,
+                                y: { duration: 2, ease: "easeInOut" } // Smooth slide animation
+                            }}
+                            className=' instagram-card'
+                        >
+                        <a href='https://www.instagram.com/caillougarage/' target="_blank" rel="noopener noreferrer">
+                            <Card>
+                                <div className="text-center flex flex-row items-center justify-center">
+                                    <img src='icons/instagram.png' alt="Instagram Icon" className="mx-auto mb-0 mt-[-6px] w-4 md:w-12" />
+                                    <h3 className="md:text-lg text-xs text-center mb-1 press-start-2p-regular" style={{ color: 'black' }}>
+                                        Instagram
+                                    </h3>
+                                </div>
+                                <div className="slider">
+                                    <div className="slide-track">
+                                        <img src="./slideshow/1.PNG" alt="Instagram 1" className="mx-auto mb-2" />
+                                        <img src="./slideshow/2.PNG" alt="Instagram 2" className="mx-auto mb-2" />
+                                        <img src="./slideshow/3.PNG" alt="Instagram 3" className="mx-auto mb-2" />
+                                        <img src="./slideshow/4.PNG" alt="Instagram 4" className="mx-auto mb-2" />
+                                        <img src="./slideshow/5.PNG" alt="Instagram 5" className="mx-auto mb-2" />
+                                        <img src="./slideshow/6.PNG" alt="Instagram 6" className="mx-auto mb-2" />
+                                        <img src="./slideshow/7.PNG" alt="Instagram 7" className="mx-auto mb-2" />
+                                        <img src="./slideshow/8.PNG" alt="Instagram 8" className="mx-auto mb-2" />
+                                        <img src="./slideshow/1.PNG" alt="Instagram 1" />
+                                        <img src="./slideshow/2.PNG" alt="Instagram 2" className="mx-auto mb-2" />
+                                        <img src="./slideshow/3.PNG" alt="Instagram 3" />
+                                        <img src="./slideshow/4.PNG" alt="Instagram 4" />
+                                        <img src="./slideshow/5.PNG" alt="Instagram 5" />
+                                        <img src="./slideshow/6.PNG" alt="Instagram 6" />
+                                        <img src="./slideshow/7.PNG" alt="Instagram 7" />
+                                        <img src="./slideshow/8.PNG" alt="Instagram 8" />
+                                    </div>
+                                </div>
+                                <p className="">Follow me on Instagram for the latest updates and behind-the-scenes looks at my crafting projects!</p>
+                            </Card>
+                        </a>
+                        </motion.div>
+                            <motion.div
+                                className=""
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.6, type: "spring" }}
+                            >
+                                <Card title="Updates">
+                                    <img src="h2.PNG" alt="Yarn" className="mx-auto mb-2 rounded-4xl" />
+                                    <p className="">
+                                        I am currently working on a pattern test by the talented designer Twin_Made. You can check out their work on Instagram. Stay tuned for more updates and new patterns coming soon!
+                                    </p>
+                                </Card>
+                            </motion.div>
+                    </div>
                     <motion.div
                         className='p-1'
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -144,7 +141,7 @@ const HomePage: React.FC<MobileHomePageProps> = ({ className }) => {
                 </>
             )}
             {activeButton === 'about' && (
-                <AboutMePage />
+                <AboutMePage activeButton={activeButton} setActiveButton={setActiveButton} />
             )}
             {activeButton === 'knit' && (
                 <KnitPage setSelected={setSelected} setExpandedCardActive={handleSetExpandedCardActive} />

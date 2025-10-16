@@ -41,7 +41,7 @@ const HomePage: React.FC<DesktopHomePageProps> = ({className}) => {
         </motion.div>
 ) : null;
     return (
-        <div className={`grid grid-cols-2 md:grid-cols-3 gap-1 mt-4 ` + (className ? className : '')}>
+        <div className={`grid grid-cols-3 gap-1 mt-4 ` + (className ? className : '')}>
             <div className='p-1'>
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -103,7 +103,7 @@ const HomePage: React.FC<DesktopHomePageProps> = ({className}) => {
             </div>
             {activeButton === 'home' && (
                 <motion.div
-                        className='p-1 rounded md:col-span-2 grid md:grid-cols-2 gap-1'
+                        className='p-1 rounded col-span-2 grid grid-cols-2 gap-1'
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, type: "spring" }}

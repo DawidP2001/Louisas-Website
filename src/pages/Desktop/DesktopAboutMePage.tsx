@@ -7,7 +7,7 @@
  *  - Include photos and personal anecdotes
  */
 import React from 'react';
-import Card from '../components/Card';
+import Card from '../../components/Card';
 import { motion } from 'framer-motion';
 
 const AboutMePage: React.FC = () => {
