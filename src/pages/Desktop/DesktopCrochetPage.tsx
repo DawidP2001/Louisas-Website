@@ -1,8 +1,8 @@
 import React from 'react';
-import Card from '../components/Card';
-import ProductCard from '../components/ProductCard';
+import Card from '../../components/Card';
+import ProductCard from '../../components/ProductCard';
 import { motion } from 'framer-motion';
-import { allProducts } from '../constants/ProductConstants';
+import { allProducts } from '../../constants/ProductConstants';
 
 interface CrochetPageProps {
   setSelected: (button: number) => void;
