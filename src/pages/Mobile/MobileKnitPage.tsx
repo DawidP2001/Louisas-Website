@@ -43,10 +43,11 @@ const KnitPage: React.FC<KnitPageProps> = ({setExpandedCardActive, activeButton,
                 <InstaCard />
             </div>
             <div className='col-span-2'>
-                {expanded }
+                {expanded}
             </div>
             <motion.div
-                className='p-1 col-span-2'
+                layout
+                className='col-span-2'
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, type: "spring" }}

@@ -36,7 +36,7 @@ const HomePage: React.FC<MobileHomePageProps> = ({ className }) => {
         <div className={`grid grid-cols-2 md:grid-cols-3 gap-1 mt-4 ` + (className ? className : '')}>
             {activeButton === 'home' && (
                 <>
-                    <div className='p-1'>
+                    <div className=''>
                         <motion.div
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -60,7 +60,7 @@ const HomePage: React.FC<MobileHomePageProps> = ({ className }) => {
                             </motion.div>
                     </div>
                     <motion.div
-                        className='p-1'
+                        className=''
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, type: "spring" }}

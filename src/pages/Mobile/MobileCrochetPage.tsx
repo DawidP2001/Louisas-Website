@@ -34,8 +34,11 @@ const CrochetPage: React.FC<CrochetPageProps> = ({setExpandedCardActive, activeB
                 <NavigationCard className="my-1" activeButton={activeButton} setActiveButton={setActiveButton} />
                 <InstaCard />
             </div>
-            {expanded}
+            <div className='col-span-2'>
+                {expanded }
+            </div>
         <motion.div
+            layout
             className='p-1 col-span-2'
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
