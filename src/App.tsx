@@ -6,8 +6,9 @@
  * To Do: 
  * - Add fiverr contact link
  * - Add more animations
- * - Make it so expanded brings you to insta
  * - Change some of the writing
+ * - Improve mobile responsiveness
+ * - On mobile the cards expand over out of the content div
  */
 import './App.css'
 import Title from './components/Title';
@@ -17,7 +18,7 @@ import MobileHomePage from './pages/Mobile/MobileHomePage';
 import React from 'react';
 
 function App() {
-  const [activeButton, setActiveButton] = React.useState('home');
+  const [activeButton, setActiveButton] = React.useState<string>('home');
   return (
     <main className='min-h-screen max-w-screen min-w-screen'>
       {/**bg-[#FEF7CD] */}
@@ -31,7 +32,6 @@ function App() {
         />
         <DesktopHomePage className='hidden sm:grid' activeButton={activeButton} setActiveButton={setActiveButton}/>
         <MobileHomePage className="grid sm:hidden" activeButton={activeButton} setActiveButton={setActiveButton}/>
-
         <Footer />
       </div>
     </main>
