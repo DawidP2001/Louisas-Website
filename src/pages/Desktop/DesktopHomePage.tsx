@@ -1,19 +1,24 @@
 import React from 'react';
 import Card from '../../components/Card';
 import NavigationCard from '../../components/NavigationCard';
-import KnitPage from '../KnitPage';
-import KnitCrochetPage from '../KnitCrochetPage';
-import CrochetPage from '../CrochetPage';
-import AboutMePage from '../AboutMePage';
+import KnitPage from './DesktopKnitPage';
+import KnitCrochetPage from './DesktopKnitCrochetPage';
+import CrochetPage from './DesktopCrochetPage';
+import AboutMePage from './DesktopAboutMePage';
 import ExpandedProductCard from '../../components/ExpandedProductCard';
 import { motion } from "framer-motion";
+import FeaturedPatternCard from '../../components/Specific-Cards/FeaturedPatternCard';
+import ContactCard from '../../components/Specific-Cards/CotactCard';
+import InstaCard from '../../components/Specific-Cards/InstaCard';
 
 interface DesktopHomePageProps {
     className?: string;
+    activeButton: string;
+    setActiveButton: (button: string) => void;
 }
 
-const HomePage: React.FC<DesktopHomePageProps> = ({className}) => {
-    const [activeButton, setActiveButton] = React.useState('home');
+const HomePage: React.FC<DesktopHomePageProps> = ({className, activeButton, setActiveButton}) => {
+    
     const [selected, setSelected] = React.useState<number | null>(null);
     const [expandedCardActive, setExpandedCardActive] = React.useState(false);
     
@@ -51,55 +56,7 @@ const HomePage: React.FC<DesktopHomePageProps> = ({className}) => {
                     <NavigationCard activeButton={activeButton} setActiveButton={setActiveButton} />
                 </motion.div>
                 {expanded}
-                <motion.div
-                    layout
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ 
-                        opacity: 1, 
-                        scale: 1,
-                        y: 0 // Slide down when expanded card is active
-                    }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                    transition={{
-                        type: "spring", 
-                        stiffness: 300, 
-                        damping: 25,
-                        y: { duration: 2, ease: "easeInOut" } // Smooth slide animation
-                    }}
-                    className=' instagram-card'
-                >
-                <a href='https://www.instagram.com/caillougarage/' target="_blank" rel="noopener noreferrer">
-                    <Card>
-                        <div className="text-center flex flex-row items-center justify-center">
-                            <img src='icons/instagram.png' alt="Instagram Icon" className="mx-auto mb-2 mt-[-6px] w-8 md:w-12" />
-                            <h3 className="md:text-lg text-xs text-center mb-4 press-start-2p-regular" style={{ color: 'black' }}>
-                                Instagram
-                            </h3>
-                        </div>
-                        <div className="slider">
-                            <div className="slide-track">
-                                <img src="./slideshow/1.PNG" alt="Instagram 1" className="mx-auto mb-2" />
-                                <img src="./slideshow/2.PNG" alt="Instagram 2" className="mx-auto mb-2" />
-                                <img src="./slideshow/3.PNG" alt="Instagram 3" className="mx-auto mb-2" />
-                                <img src="./slideshow/4.PNG" alt="Instagram 4" className="mx-auto mb-2" />
-                                <img src="./slideshow/5.PNG" alt="Instagram 5" className="mx-auto mb-2" />
-                                <img src="./slideshow/6.PNG" alt="Instagram 6" className="mx-auto mb-2" />
-                                <img src="./slideshow/7.PNG" alt="Instagram 7" className="mx-auto mb-2" />
-                                <img src="./slideshow/8.PNG" alt="Instagram 8" className="mx-auto mb-2" />
-                                <img src="./slideshow/1.PNG" alt="Instagram 1" />
-                                <img src="./slideshow/2.PNG" alt="Instagram 2" />
-                                <img src="./slideshow/3.PNG" alt="Instagram 3" />
-                                <img src="./slideshow/4.PNG" alt="Instagram 4" />
-                                <img src="./slideshow/5.PNG" alt="Instagram 5" />
-                                <img src="./slideshow/6.PNG" alt="Instagram 6" />
-                                <img src="./slideshow/7.PNG" alt="Instagram 7" />
-                                <img src="./slideshow/8.PNG" alt="Instagram 8" />
-                            </div>
-                        </div>
-                        <p className="">Follow me on Instagram for the latest updates and behind-the-scenes looks at my crafting projects!</p>
-                    </Card>
-                </a>
-                </motion.div>
+                <InstaCard />
             </div>
             {activeButton === 'home' && (
                 <motion.div
@@ -124,15 +81,8 @@ const HomePage: React.FC<DesktopHomePageProps> = ({className}) => {
                         </Card>
                     </div>
                     <div className='p-1'>
-                        <Card title="Featured Pattern">
-                            <p className='text-center text-black mb-5 text-lg' style={{marginTop: '-1rem'}}>Wales Crochet Pattern</p>
-                            <img src="./gifs/Wales Crochet GIF by Twin_Made.gif" alt="Wales Crochet Pattern" className="mx-auto mb-2" />
-                            <p className="">Check out my latest knit pattern, the Cozy Cable Sweater! Perfect for chilly days, this sweater combines classic cables with a modern fit. Click below to view the pattern and start knitting!</p>
-                        </Card>
-                        <Card title="Contact me">
-                            <img src="./gifs/Phone.gif" alt="Phone" className="mx-auto mb-2" />
-                            <p className="">Have questions or want to collaborate? Feel free to reach out to me via email at louisa@example.com</p>
-                        </Card>
+                        <FeaturedPatternCard />
+                        <ContactCard />
                     </div>
                 </motion.div>
             )}

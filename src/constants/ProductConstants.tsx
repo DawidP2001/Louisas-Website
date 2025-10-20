@@ -2,10 +2,8 @@
  * Product-related constants
  * This page holds the constants used across product components. used this instead of hardcoding values or using a database.
  * author: Dawid Pionk
- * 
- * To Do:
- * 1. Add more products as needed
  */
+
 
 // Export all product constants
 export const allProducts = [
@@ -15,6 +13,7 @@ export const allProducts = [
     category: "Crochet",
     imageUrl: "./Crochet/the-odessa-top.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/C6_Btb0tXKH/?img_index=1",
   },
   {
     id: 2,
@@ -22,6 +21,7 @@ export const allProducts = [
     category: "Crochet",
     imageUrl: "./Crochet/lily-jane-cardigan.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/CuNSZVEr64H/?img_index=1",
   },
   {
     id: 3,
@@ -29,6 +29,7 @@ export const allProducts = [
     category: "Knit",
     imageUrl: "./Knit/tuesday-top.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/C6T8GwFtQ91/?img_index=1",
   },
   {
     id: 4,
@@ -36,6 +37,7 @@ export const allProducts = [
     category: "Crochet",
     imageUrl: "./Crochet/the-venus-dress.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/C_Vljf6Na_Y/?img_index=1",
   },
   {
     id: 5,
@@ -43,6 +45,7 @@ export const allProducts = [
     category: "Knit",
     imageUrl: "./Knit/junebug-top.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/DBb-fTCuIfw/?img_index=1",
   },
   {
     id: 6,
@@ -50,6 +53,7 @@ export const allProducts = [
     category: "Crochet",
     imageUrl: "./Crochet/garden-tote-bag.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/Cs30iUNNXEE/?img_index=1",
   },
   {
     id: 7,
@@ -57,6 +61,7 @@ export const allProducts = [
     category: "Crochet",
     imageUrl: "./Crochet/garden-messenger-bag.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/CuRgPQxLZMR/?img_index=1",
   },
   {
     id: 8,
@@ -64,6 +69,7 @@ export const allProducts = [
     category: "Crochet",
     imageUrl: "./Crochet/forest-fairy-leg-warmers.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/CrEAZG3oG-i/?img_index=1",
   },
   {
     id: 9,
@@ -71,6 +77,7 @@ export const allProducts = [
     category: "Crochet",
     imageUrl: "./Crochet/diwata.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/C7HMbkQNWxb/?img_index=1",
   },
   {
     id: 10,
@@ -78,6 +85,7 @@ export const allProducts = [
     category: "Crochet",
     imageUrl: "./Crochet/camellia-cardigan.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/C7oK225tPLV/?img_index=1",
   },
   {
     id: 11,
@@ -85,6 +93,7 @@ export const allProducts = [
     category: "Crochet",
     imageUrl: "./Crochet/babydoll.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/DH8zvyxtIPC/?img_index=1",
   },
   {
     id: 12,
@@ -92,6 +101,7 @@ export const allProducts = [
     category: "Crochet",
     imageUrl: "./Crochet/leg-warmers.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/CubiFDvrNgp/?img_index=1",
   },
   {
     id: 13,
@@ -99,6 +109,7 @@ export const allProducts = [
     category: "Crochet",
     imageUrl: "./Crochet/the-zephyr-top.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/C8pHSHTtyW2/?img_index=1",
   },
   {
     id: 14,
@@ -106,6 +117,7 @@ export const allProducts = [
     category: "Crochet",
     imageUrl: "./Crochet/florence-cardigan.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/C-3FnDpuN5v/?img_index=1",
   },
   {
     id: 15,
@@ -113,6 +125,7 @@ export const allProducts = [
     category: "Crochet",
     imageUrl: "./Crochet/the-garden-pond-tote.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/Cuz_IXHLXmJ/?img_index=1",
   },
   {
     id: 16,
@@ -120,6 +133,7 @@ export const allProducts = [
     category: "Knit",
     imageUrl: "./Knit/the-iris-top.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/C3zhVBIr-24/?img_index=1",
   },
   {
     id: 17,
@@ -127,5 +141,6 @@ export const allProducts = [
     category: "Knit",
     imageUrl: "./Knit/the-ophelia-top.png",
     description: "A cozy and stylish cardigan perfect for layering.",
+    link: "https://www.instagram.com/p/CvhhxOxNpky/?img_index=1",
   }
 ];

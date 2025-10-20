@@ -14,8 +14,10 @@ import Title from './components/Title';
 import Footer from './components/Footer';
 import DesktopHomePage from './pages/Desktop/DesktopHomePage';
 import MobileHomePage from './pages/Mobile/MobileHomePage';
+import React from 'react';
 
 function App() {
+  const [activeButton, setActiveButton] = React.useState('home');
   return (
     <main className='min-h-screen max-w-screen min-w-screen'>
       {/**bg-[#FEF7CD] */}
@@ -27,8 +29,8 @@ function App() {
             subtitle="Discover my favorite knit and crochet patterns, tips, and projects!" 
             className="mb-1"
         />
-        <DesktopHomePage className='hidden sm:grid'/>
-        <MobileHomePage className="grid sm:hidden" />
+        <DesktopHomePage className='hidden sm:grid' activeButton={activeButton} setActiveButton={setActiveButton}/>
+        <MobileHomePage className="grid sm:hidden" activeButton={activeButton} setActiveButton={setActiveButton}/>
 
         <Footer />
       </div>

@@ -5,33 +5,19 @@ import KnitPage from './MobileKnitPage';
 import KnitCrochetPage from './MobileKnitCrochetPage';
 import CrochetPage from './MobileCrochetPage';
 import AboutMePage from './MobileAboutMePage';
-import ExpandedProductCard from '../../components/ExpandedProductCard';
+
 import { motion } from "framer-motion";
 import InstaCard from '../../components/Specific-Cards/InstaCard';
+import FeaturedPatternCard from '../../components/Specific-Cards/FeaturedPatternCard';
+import ContactCard from '../../components/Specific-Cards/CotactCard';
 
 interface MobileHomePageProps {
     className?: string;
+    activeButton: string;
+    setActiveButton: (button: string) => void;
 }
 
-const HomePage: React.FC<MobileHomePageProps> = ({ className }) => {
-    const [activeButton, setActiveButton] = React.useState('home');
-    const [selected, setSelected] = React.useState<number | null>(null);
-    const [expandedCardActive, setExpandedCardActive] = React.useState(false);
-    
-    // Function to handle setting the expanded card active state
-    const handleSetExpandedCardActive = (active: boolean) => {
-        if (!expandedCardActive && active) {
-          //  const instaCard = document.querySelector('.instagram-card');
-        }
-        setExpandedCardActive(active);
-    };
-
-    React.useEffect(() => {
-        setSelected(null);
-        setExpandedCardActive(false);
-        
-    }, [activeButton]);
-    
+const HomePage: React.FC<MobileHomePageProps> = ({ className, activeButton, setActiveButton }) => {
     return (
         <div className={`grid grid-cols-2 md:grid-cols-3 gap-1 mt-4 ` + (className ? className : '')}>
             {activeButton === 'home' && (
@@ -72,15 +58,8 @@ const HomePage: React.FC<MobileHomePageProps> = ({ className }) => {
                                 tips, and projects. I hope you enjoy exploring and find inspiration for your own crafting journey!
                             </p>
                         </Card>
-                        <Card title="Featured Pattern">
-                            <p className='text-center text-black mb-5 text-lg' style={{marginTop: '-1rem'}}>Wales Crochet Pattern</p>
-                            <img src="./gifs/Wales Crochet GIF by Twin_Made.gif" alt="Wales Crochet Pattern" className="mx-auto mb-2" />
-                            <p className="">Check out my latest knit pattern, the Cozy Cable Sweater! Perfect for chilly days, this sweater combines classic cables with a modern fit. Click below to view the pattern and start knitting!</p>
-                        </Card>
-                        <Card title="Contact me">
-                            <img src="./gifs/Phone.gif" alt="Phone" className="mx-auto mb-2" />
-                            <p className="">Have questions or want to collaborate? Feel free to reach out to me via email at louisa@example.com</p>
-                        </Card>
+                        <FeaturedPatternCard />
+                        <ContactCard />
                     </motion.div>
                 </>
             )}
@@ -88,13 +67,13 @@ const HomePage: React.FC<MobileHomePageProps> = ({ className }) => {
                 <AboutMePage activeButton={activeButton} setActiveButton={setActiveButton} />
             )}
             {activeButton === 'knit' && (
-                <KnitPage activeButton={activeButton} setActiveButton={setActiveButton} setExpandedCardActive={handleSetExpandedCardActive} />
+                <KnitPage activeButton={activeButton} setActiveButton={setActiveButton} />
             )}
             {activeButton === 'crochet' && (
-                <CrochetPage activeButton={activeButton} setActiveButton={setActiveButton} setExpandedCardActive={handleSetExpandedCardActive}/>
+                <CrochetPage activeButton={activeButton} setActiveButton={setActiveButton} />
             )}
             {activeButton === 'knit-crochet' && (
-                <KnitCrochetPage activeButton={activeButton} setActiveButton={setActiveButton} setExpandedCardActive={handleSetExpandedCardActive}/>
+                <KnitCrochetPage activeButton={activeButton} setActiveButton={setActiveButton} />
             )}
         </div>
     );

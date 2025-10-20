@@ -3,7 +3,7 @@ const Footer = () => {
         <div className="text-center p-0 text-black flex justify-around items-center mt-4 border-t border-black pt-2 text-xs sm:text-sm">
             <div>
                 <p className="text-sm">&copy; {new Date().getFullYear()} caillougarage. All rights reserved.</p>
-                <a className="text-sm underline text-blue-600" href="https://www.flaticon.com" title="instagram logo icons">Icons taken from Flaticon</a>
+                <p className="text-sm">Icons taken from <a className="text-sm underline text-blue-600" href="https://www.flaticon.com" title="instagram logo icons">Flaticon</a></p>
                 
             </div>
             <div>

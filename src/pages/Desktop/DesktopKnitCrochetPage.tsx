@@ -1,26 +1,25 @@
 /**
- * KnitPage.tsx
- * Page component for displaying knit patterns and related content.
+ * KnitCrochetPage.tsx
+ * Page component for displaying knit and crochet patterns and related content.
  * author: Dawid Pionk
- * To Do:
- * 1. Add filtering functionality for patterns
- * 2. Add search bar functionality
+ * 
+ * Note: Currently a placeholder page as there are no combined knit and crochet products.
  */
 import React from 'react';
-import Card from '../components/Card';
-import ProductCard from '../components/ProductCard';
+import Card from '../../components/Card';
+import ProductCard from '../../components/ProductCard';
 import { motion } from 'framer-motion';
-import { allProducts } from '../constants/ProductConstants';
+import { allProducts } from '../../constants/ProductConstants';
 
-interface KnitPageProps {
-    setSelected: (button: number) => void;
-    setExpandedCardActive: (active: boolean) => void;
+interface KnitCrochetPageProps {
+  setSelected: (button: number) => void;
+  setExpandedCardActive: (active: boolean) => void;
 }   
 
-const KnitPage: React.FC<KnitPageProps> = ({ setSelected, setExpandedCardActive }) => {
+const KnitCrochetPage: React.FC<KnitCrochetPageProps> = ({ setSelected, setExpandedCardActive }) => {
     const [searchTerm, setSearchTerm] = React.useState('');
     const [sortSelected, setSortSelected] = React.useState('');
-
+    
     return (
             <motion.div
                 className='p-1 col-span-2'
@@ -49,7 +48,7 @@ const KnitPage: React.FC<KnitPageProps> = ({ setSelected, setExpandedCardActive 
                     </div>
                     <div className='grid grid-cols-3 gap-1'>
                         {allProducts
-                        .filter(product => product.category === "Knit")
+                        .filter(product => product.category === "KnitCrochet")
                         .filter(product => product.name.toLowerCase().includes(searchTerm.toLowerCase()))
                         .sort((a, b) => {
                             if (sortSelected === 'name-asc') return a.name.localeCompare(b.name);
@@ -63,9 +62,13 @@ const KnitPage: React.FC<KnitPageProps> = ({ setSelected, setExpandedCardActive 
                         ))
                     }
                     </div>
+                    <div className=''>
+                        <h3 className='text-left'>Don't have any projects for this section yet x</h3>
+                    </div>
                 </Card>
             </motion.div>
     );
 };
 
-export default KnitPage;
+export default KnitCrochetPage;
+

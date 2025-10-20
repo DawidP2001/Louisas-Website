@@ -16,12 +16,11 @@ import ExpandedProductCard from '../../components/ExpandedProductCard';
 import InstaCard from '../../components/Specific-Cards/InstaCard';
 
 interface KnitPageProps {
-    setExpandedCardActive: (active: boolean) => void;
     activeButton: string;
     setActiveButton: (button: string) => void;
 }   
 
-const KnitPage: React.FC<KnitPageProps> = ({setExpandedCardActive, activeButton, setActiveButton }) => {
+const KnitPage: React.FC<KnitPageProps> = ({ activeButton, setActiveButton }) => {
     const [searchTerm, setSearchTerm] = React.useState('');
     const [sortSelected, setSortSelected] = React.useState('');
     const [selected, setSelected] = React.useState<number | null>(null);
@@ -81,7 +80,7 @@ const KnitPage: React.FC<KnitPageProps> = ({setExpandedCardActive, activeButton,
                             return 0;
                         })
                         .map(product => (
-                            <button key={product.id} onClick={() => {setSelected(product.id); setExpandedCardActive(true);}}>
+                            <button key={product.id} onClick={() => {setSelected(product.id);}}>
                                 <ProductCard name={product.name} imageUrl={product.imageUrl} />
                             </button>
                         ))
