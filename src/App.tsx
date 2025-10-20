@@ -6,11 +6,8 @@
  * To Do: 
  * - Add fiverr contact link
  * - Add more animations
- * - Add mobile responsiveness
- * - Do mobile about me page
- * - Do mobile Knitting page
- * - Do mobile Crochet page
- * - Do mobile knnit and crochet page
+ * - Make it so expanded brings you to insta
+ * - Change some of the writing
  */
 import './App.css'
 import Title from './components/Title';
