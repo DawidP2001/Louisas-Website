@@ -8,7 +8,7 @@ const Footer = () => {
             </div>
             <div>
                 <p className="text-sm">Created by Dawid Pionk;</p>
-                <p className="text-sm">Contact Dawid at: <a href="https://www.linkedin.com/in/dawid-pionk/" className="underline text-blue-600">LinkedIn</a>, <a href="https://www.fiverr.com/dawidpionk" className="underline text-blue-600">Fiverr</a></p>
+                <p className="text-sm">Contact Dawid at: <a href="https://www.linkedin.com/in/dawid-pionk/" className="underline text-blue-600">LinkedIn</a></p>
             </div>
         </div>
     );

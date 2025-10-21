@@ -71,7 +71,7 @@ const HomePage: React.FC<DesktopHomePageProps> = ({className, activeButton, setA
                             <div className="wave text-center mx-auto"></div>
                             <p className="">
                                 Hello! I'm Louisa, and welcome to my caillougarage website. Here you'll find a collection of my favorite knit and crochet patterns, 
-                                tips, and projects. I hope you enjoy exploring and find inspiration for your own crafting journey!
+                                and projects. I hope you enjoy exploring and find inspiration for your own crafting journey!
                             </p>
                         </Card>
                         <UpdatesCard />
