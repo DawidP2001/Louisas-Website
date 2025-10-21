@@ -36,7 +36,7 @@ export const allProducts = [
     name: "Venus Dress",
     category: "Crochet",
     imageUrl: "./Crochet/the-venus-dress.png",
-    description: "A cozy and stylish cardigan perfect for layering.",
+    description: "pattern out tomorrow!! really happy with how this dress came out :D pattern is beginner friendly and works up quicker than you think!! thank you @bugs.bundles for another lovely pattern <33",
     link: "https://www.instagram.com/p/C_Vljf6Na_Y/?img_index=1",
   },
   {
@@ -44,7 +44,7 @@ export const allProducts = [
     name: "Junebug Top",
     category: "Knit",
     imageUrl: "./Knit/junebug-top.png",
-    description: "A cozy and stylish cardigan perfect for layering.",
+    description: "the first raglan i’ve enjoyed making and the keyhole detail is just so cute!! she works up quickly and is perfect for beginners!! pattern comes out friday :D by @natssrecord",
     link: "https://www.instagram.com/p/DBb-fTCuIfw/?img_index=1",
   },
   {
@@ -92,7 +92,7 @@ export const allProducts = [
     name: "Babydoll Top",
     category: "Crochet",
     imageUrl: "./Crochet/babydoll.png",
-    description: "A cozy and stylish cardigan perfect for layering.",
+    description: "˚₊‧꒰ა ☆ ໒꒱ ‧₊˚ i cant wait to wear this all summer!!! babydoll crochet pattern by @natssrecords ✨",
     link: "https://www.instagram.com/p/DH8zvyxtIPC/?img_index=1",
   },
   {

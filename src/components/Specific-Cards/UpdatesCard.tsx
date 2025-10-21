@@ -18,7 +18,7 @@ const UpdatesCard: React.FC<UpdatesCardProps> = ({ className='' }) => {
             <Card title="Updates">
                 <img src="h2.PNG" alt="Yarn" className="mx-auto mb-2 rounded-4xl" />
                 <p className="">
-                    I am currently working on a pattern test by the talented designer Twin_Made. You can check out their work on Instagram. Stay tuned for more updates and new patterns coming soon!
+                    I am currently working on a pattern test by the talented designer <span style={{hyphens:"none"}}>@Twin_Made.</span> You can check out their work on Instagram. Stay tuned for more updates and new patterns coming soon!
                 </p>
             </Card>
         </motion.div>

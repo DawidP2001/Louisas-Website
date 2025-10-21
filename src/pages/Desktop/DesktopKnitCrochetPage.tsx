@@ -27,7 +27,7 @@ const KnitCrochetPage: React.FC<KnitCrochetPageProps> = ({ setSelected, setExpan
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, type: "spring" }}
             >   
-                <Card title="Knit Patterns">
+                <Card title="Knit & Crochet Patterns">
                     <div className='flex'>
                     <input 
                         type="text" 

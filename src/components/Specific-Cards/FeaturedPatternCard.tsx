@@ -11,7 +11,7 @@ const FeaturedPatternCard: React.FC<FeaturedPatternCardProps> = ({ className='' 
                 <a href="https://www.tiktok.com/@caillougarage/video/7541708443678297366" className='' target="_blank" rel="noopener noreferrer">
                     <img src="./gifs/Tulip-Shorts.gif" alt="Wales Crochet Pattern" className="mx-auto mb-2 border rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer" />
                 </a>
-                <p className="">pattern by @made_bymolly on ig, out soon!</p>
+                <p className="">pattern by <span style={{hyphens:"none"}}>@made_bymolly</span> on ig, out soon!</p>
             </Card>
     );
 };
