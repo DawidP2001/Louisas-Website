@@ -14,6 +14,7 @@
 * JavaScript
 * React
 * [![Tailwind][Tailwind.js]][Tailwind-url]
+* Typescript
 
 ## Development Dependencies
 
