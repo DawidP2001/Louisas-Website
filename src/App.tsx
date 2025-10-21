@@ -4,11 +4,10 @@
  * author: Dawid Pionk
  * 
  * To Do: 
- * - Add fiverr contact link
  * - Add more animations
  * - Change some of the writing
- * - Improve mobile responsiveness
- * - On mobile the cards expand over out of the content div
+ * - Product Descriptions
+ * - Mobile: when you click product it should scroll to top
  */
 import './App.css'
 import Title from './components/Title';
