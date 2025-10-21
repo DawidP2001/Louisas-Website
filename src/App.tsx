@@ -16,14 +16,13 @@ import Footer from './components/Footer';
 import DesktopHomePage from './pages/Desktop/DesktopHomePage';
 import MobileHomePage from './pages/Mobile/MobileHomePage';
 import React from 'react';
-import { motion } from 'framer-motion';
 
 function App() {
   const [activeButton, setActiveButton] = React.useState<string>('home');
   return (
     <main className='min-h-screen max-w-screen min-w-screen'>
       {/**bg-[#FEF7CD] */}
-      <motion.div layout id="contents" className="max-w-3xl mx-auto p-4 my-2 bg-white dashed relative">
+      <div id="contents" className="max-w-3xl mx-auto p-4 my-2 bg-white dashed relative">
         <img src="./animations/yarn.png" alt="Pattern" className="text-black w-28 absolute top-4 right-4 spin-left rock-back-and-forth hidden md:block" />
         <img src="./animations/yarn.png" alt="Pattern" className="text-black w-28 absolute top-4 left-4 spin-right rock-back-and-forth hidden md:block" />
         <Title 
@@ -34,7 +33,7 @@ function App() {
         <DesktopHomePage className='hidden sm:grid' activeButton={activeButton} setActiveButton={setActiveButton}/>
         <MobileHomePage className="grid sm:hidden" activeButton={activeButton} setActiveButton={setActiveButton}/>
         <Footer />
-      </motion.div>
+      </div>
     </main>
   );
 }
