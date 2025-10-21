@@ -13,6 +13,7 @@ body {
   background-repeat: repeat;
   position: relative;
   overflow-x: hidden;
+  background-color: #FFD7D7;
 }
 
 
@@ -200,4 +201,22 @@ body {
 
 #contents {
   height: auto;
+}
+
+.lilita-one-regular {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.crafty-girls-regular {
+  font-family: "Crafty Girls", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.crafty-girls-bold {
+  font-family: "Crafty Girls", cursive;
+  font-weight: bold;
+  font-style: normal;
 }

@@ -23,7 +23,7 @@ const ExpandedProductCard: React.FC<ExpandedProductCardProps> = ({ id }) => {
         <img src={product.imageUrl} alt={product.name} className="mx-auto mb-2 rounded-lg border border-black hover:scale-105 transition-transform duration-300 cursor-pointer" />
       </a>
       <div className="text-gray-600">
-        <h3 className="text-sm text-left mb-1 press-start-2p-regular" style={{ color: 'black' }}>{product.name}</h3>
+        <h3 className="text-sm text-left mb-1 crafty-girls-bold sm:text-3xl" style={{ color: 'black' }}>{product.name}</h3>
       </div>
       <p className="text-left text-black mb-1"><span className='font-semibold'>Description:</span> {product.description}</p>
       <p className="text-left text-black mb-1"><span className='font-semibold'>Category:</span> {product.category}</p>
@@ -38,7 +38,7 @@ const ExpandedProductCard: React.FC<ExpandedProductCardProps> = ({ id }) => {
       </a>
       <div className='flex-1'>
         <div className="text-gray-600">
-          <h3 className="text-sm text-left mb-1 press-start-2p-regular" style={{ color: 'black' }}>{product.name}</h3>
+          <h3 className="text-2xl text-left mb-1 crafty-girls-bold" style={{ color: 'black' }}>{product.name}</h3>
         </div>
         <p className="text-left text-xs text-black mb-1"><span className='font-semibold'>Description:</span> {product.description}</p>
         <p className="text-left text-xs text-black mb-1"><span className='font-semibold'>Category:</span> {product.category}</p>

@@ -28,7 +28,7 @@ const InstaCard: React.FC<InstaCardProps> = ({ className='' }) => {
                 <Card className={'my-1 ' + className}>
                     <div className="text-center flex flex-row items-center justify-center mt-2">
                         <img src='icons/instagram.png' alt="Instagram Icon" className="mr-1 mt-[-8px] sm:mt-[-12px] w-6 sm:w-8" />
-                        <h3 className="md:text-lg text-xs text-center mb-2 press-start-2p-regular" style={{ color: 'black' }}>
+                        <h3 className="sm:text-3xl text-2xl text-center mb-2 crafty-girls-bold" style={{ color: 'black' }}>
                             Instagram
                         </h3>
                     </div>
@@ -45,7 +45,7 @@ const InstaCard: React.FC<InstaCardProps> = ({ className='' }) => {
                             <img src="./slideshow/1.PNG" alt="Instagram 1" className="" />
                         </div>
                     </div>
-                    <p className="">Follow me on Instagram for the latest updates and behind-the-scenes looks at my crafting projects!</p>
+                    <p className="">Follow me on Instagram for the latest updates and crafting projects!</p>
                 </Card>
             </a>
         </motion.div>

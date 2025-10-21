@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import InstaCard from '../../components/Specific-Cards/InstaCard';
 import FeaturedPatternCard from '../../components/Specific-Cards/FeaturedPatternCard';
 import ContactCard from '../../components/Specific-Cards/CotactCard';
+import UpdatesCard from '../../components/Specific-Cards/UpdatesCard';
 
 interface MobileHomePageProps {
     className?: string;
@@ -31,19 +32,7 @@ const HomePage: React.FC<MobileHomePageProps> = ({ className, activeButton, setA
                             <NavigationCard activeButton={activeButton} setActiveButton={setActiveButton} />
                         </motion.div>
                         <InstaCard />
-                            <motion.div
-                                className=""
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.6, type: "spring" }}
-                            >
-                                <Card title="Updates">
-                                    <img src="h2.PNG" alt="Yarn" className="mx-auto mb-2 rounded-4xl" />
-                                    <p className="">
-                                        I am currently working on a pattern test by the talented designer Twin_Made. You can check out their work on Instagram. Stay tuned for more updates and new patterns coming soon!
-                                    </p>
-                                </Card>
-                            </motion.div>
+                        <UpdatesCard />
                     </div>
                     <motion.div
                         className=''

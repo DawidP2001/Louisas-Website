@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import FeaturedPatternCard from '../../components/Specific-Cards/FeaturedPatternCard';
 import ContactCard from '../../components/Specific-Cards/CotactCard';
 import InstaCard from '../../components/Specific-Cards/InstaCard';
+import UpdatesCard from '../../components/Specific-Cards/UpdatesCard';
 
 interface DesktopHomePageProps {
     className?: string;
@@ -73,12 +74,7 @@ const HomePage: React.FC<DesktopHomePageProps> = ({className, activeButton, setA
                                 tips, and projects. I hope you enjoy exploring and find inspiration for your own crafting journey!
                             </p>
                         </Card>
-                        <Card title="Updates">
-                            <img src="h2.PNG" alt="Yarn" className="mx-auto mb-2 rounded-4xl" />
-                            <p className="">
-                                I am currently working on a pattern test by the talented designer Twin_Made. You can check out their work on Instagram. Stay tuned for more updates and new patterns coming soon!
-                            </p>
-                        </Card>
+                        <UpdatesCard />
                     </div>
                     <div className='p-1'>
                         <FeaturedPatternCard />

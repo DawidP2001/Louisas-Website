@@ -14,7 +14,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, imageUrl, className = '
         <img src={imageUrl} alt={name} className="mx-auto mb-2 rounded-lg border" />
       )}
       <div className="text-gray-600">
-        <h3 className="text-sm text-left mb-2 press-start-2p-regular" style={{ color: 'black' }}>{name}</h3>
+        <h3 className="text-lg text-left mb-2 crafty-girls-bold" style={{ color: 'black' }}>{name}</h3>
       </div>
         {children}
     </div>

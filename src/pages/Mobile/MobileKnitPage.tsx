@@ -80,11 +80,9 @@ const KnitPage: React.FC<KnitPageProps> = ({ activeButton, setActiveButton }) =>
                             return 0;
                         })
                         .map(product => (
-                            <div className='h-64'>
-                                <button key={product.id} onClick={() => {setSelected(product.id);}}>
-                                    <ProductCard name={product.name} imageUrl={product.imageUrl} />
-                                </button>
-                            </div>
+                            <button key={product.id} onClick={() => {setSelected(product.id);}}>
+                                <ProductCard name={product.name} imageUrl={product.imageUrl} />
+                            </button>
                         ))
                     }
                     </div>
