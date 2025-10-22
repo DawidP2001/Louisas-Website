@@ -5,7 +5,7 @@
  * 
  * Note: Currently a placeholder page as there are no combined knit and crochet products.
  */
-import React from 'react';
+import React, { useEffect } from 'react';
 import Card from '../../components/Card';
 import { motion } from 'framer-motion';
 import NavigationCard from '../../components/NavigationCard';
@@ -23,16 +23,28 @@ const KnitCrochetPage: React.FC<KnitCrochetPageProps> = ({ activeButton, setActi
     const [searchTerm, setSearchTerm] = React.useState('');
     const [sortSelected, setSortSelected] = React.useState('');
     const [selected, setSelected] = React.useState<number | null>(null);
+    const expandedRef = React.useRef<HTMLDivElement>(null);
 
     const expanded = selected ? (
         <motion.div
+        ref={expandedRef}
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, type: "spring" }}
         >
-            <ExpandedProductCard id={selected} />
+            <ExpandedProductCard id={selected} ref={expandedRef}/>
         </motion.div>
     ) : null;
+
+    useEffect(() => {
+    if (expandedRef.current) {
+        expandedRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start", 
+        });
+    }
+    }, [selected]);
+    
     return (
         <>
             <div className='col-span-2 grid grid-cols-2 gap-1'>
@@ -49,11 +61,11 @@ const KnitCrochetPage: React.FC<KnitCrochetPageProps> = ({ activeButton, setActi
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, type: "spring" }}
             >   
-                <Card title="Knit & Crochet Patterns">
+                <Card title="Knit & Crochet Projects">
                     <div className='flex'>
                     <input 
                         type="text" 
-                        placeholder="Search patterns..." 
+                        placeholder="Search Projects..." 
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                         className="w-full p-2 mb-4 border rounded" 

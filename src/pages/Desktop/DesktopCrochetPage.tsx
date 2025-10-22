@@ -20,11 +20,11 @@ const CrochetPage: React.FC<CrochetPageProps> = ({ setSelected, setExpandedCardA
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, type: "spring" }}
         >
-            <Card title="Crochet Patterns">
+            <Card title="Crochet Projects">
                 <div className='flex'>
                 <input 
                         type="text" 
-                        placeholder="Search patterns..." 
+                        placeholder="Search Projects..." 
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                         className="w-full p-2 mb-4 border rounded" 

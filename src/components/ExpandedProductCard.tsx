@@ -4,9 +4,10 @@ import { motion } from 'framer-motion';
 
 interface ExpandedProductCardProps {
   id: number | null;
+  ref?: React.Ref<HTMLDivElement>;
 }
 
-const ExpandedProductCard: React.FC<ExpandedProductCardProps> = ({ id }) => {
+const ExpandedProductCard: React.FC<ExpandedProductCardProps> = ({ id, ref }) => {
   const product = id ? allProducts.find(p => p.id === id) : null;
   
   if (!product) return null;
@@ -31,7 +32,8 @@ const ExpandedProductCard: React.FC<ExpandedProductCardProps> = ({ id }) => {
 
     {/**Mobile */}
     <div
-      className={`bg-[#FFD7D7] rounded-lg flex sm:hidden h-58 border border-black items-center`}
+      className={`bg-[#FFD7D7] rounded-lg flex sm:hidden border border-black items-center p-1`}
+      ref={ref}
     >
       <a className='w-1/2 mr-3 h-58 p-1 flex items-center' href={product.link} target="_blank" rel="noopener noreferrer">
         <img src={product.imageUrl} alt={product.name} className="rounded-lg border border-black object-contain my-auto max-h-48 mx-auto" />

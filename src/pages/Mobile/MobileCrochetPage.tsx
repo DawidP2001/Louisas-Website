@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Card from '../../components/Card';
 import ProductCard from '../../components/ProductCard';
 import { motion } from 'framer-motion';
@@ -16,6 +16,7 @@ const CrochetPage: React.FC<CrochetPageProps> = ({activeButton, setActiveButton 
     const [searchTerm, setSearchTerm] = React.useState('');
     const [sortSelected, setSortSelected] = React.useState('');
     const [selected, setSelected] = React.useState<number | null>(null);
+    const expandedRef = React.useRef<HTMLDivElement>(null);
 
     const expanded = selected ? (
         <motion.div
@@ -23,9 +24,18 @@ const CrochetPage: React.FC<CrochetPageProps> = ({activeButton, setActiveButton 
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, type: "spring" }}
         >
-            <ExpandedProductCard id={selected} />
+            <ExpandedProductCard id={selected} ref={expandedRef}/>
         </motion.div>
     ) : null;
+
+    useEffect(() => {
+    if (expandedRef.current) {
+      expandedRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start", 
+      });
+    }
+  }, [selected]);
 
     return (
         <>
@@ -43,11 +53,11 @@ const CrochetPage: React.FC<CrochetPageProps> = ({activeButton, setActiveButton 
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, type: "spring" }}
         >
-            <Card title="Crochet Patterns">
+            <Card title="Crochet Projects">
                 <div className='flex'>
                 <input 
                         type="text" 
-                        placeholder="Search patterns..." 
+                        placeholder="Search Projects..." 
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                         className="w-full p-2 mb-4 border rounded" 
@@ -72,7 +82,7 @@ const CrochetPage: React.FC<CrochetPageProps> = ({activeButton, setActiveButton 
                             return 0;
                         })
                         .map(product => (
-                            <button key={product.id} onClick={() => {setSelected(product.id)}}>
+                            <button key={product.id} onClick={() => {setSelected(product.id);}}>
                                 <ProductCard name={product.name} imageUrl={product.imageUrl} />
                             </button>
                         ))

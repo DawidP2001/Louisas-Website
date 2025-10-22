@@ -28,11 +28,11 @@ const KnitPage: React.FC<KnitPageProps> = ({ setSelected, setExpandedCardActive 
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, type: "spring" }}
             >   
-                <Card title="Knit Patterns">
+                <Card title="Knitting Projects">
                     <div className='flex'>
                     <input 
                         type="text" 
-                        placeholder="Search patterns..." 
+                        placeholder="Search Projects..." 
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                         className="w-full p-2 mb-4 border rounded" 

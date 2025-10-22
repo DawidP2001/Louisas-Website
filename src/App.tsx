@@ -7,7 +7,6 @@
  * - Add more animations
  * - Change some of the writing
  * - Mobile: when you click product it should scroll to top
- * - change pattern to projects
  * - look for silly playful fonts
  * - add sound effects maybe
  */
