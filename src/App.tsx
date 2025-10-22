@@ -8,6 +8,7 @@
  * - Change some of the writing
  * - look for silly playful fonts
  * - add sound effects maybe
+ * - Update Readme
  */
 import './App.css'
 import Title from './components/Title';
