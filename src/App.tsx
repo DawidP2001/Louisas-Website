@@ -6,10 +6,10 @@
  * To Do: 
  * - Add more animations
  * - Change some of the writing
- * - Product Descriptions
  * - Mobile: when you click product it should scroll to top
  * - change pattern to projects
- * - leg warmers change name
+ * - look for silly playful fonts
+ * - add sound effects maybe
  */
 import './App.css'
 import Title from './components/Title';
