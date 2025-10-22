@@ -26,8 +26,16 @@ const ExpandedProductCard: React.FC<ExpandedProductCardProps> = ({ id, ref }) =>
       <div className="text-gray-600">
         <h3 className="text-sm text-left mb-1 crafty-girls-bold sm:text-3xl" style={{ color: 'black' }}>{product.name}</h3>
       </div>
-      <p className="text-left text-black mb-1"><span className='font-semibold'>Description:</span> {product.description}</p>
-      <p className="text-left text-black mb-1"><span className='font-semibold'>Category:</span> {product.category}</p>
+      <p className="text-left text-black mb-1"><span className='font-semibold'>Description: </span> {product.description}</p>
+      <p className="text-left text-black mb-1"><span className='font-semibold'>Category: </span> {product.category}</p>
+      {product.author && (
+          <p className="text-left text-black mb-1">
+            <span className='font-semibold'>Author: </span> 
+            <a href={product.authorLink} target="_blank" rel="noopener noreferrer" className='text-blue-800'>
+              {product.author}
+            </a>
+          </p>
+      )}
     </motion.div>
 
     {/**Mobile */}
@@ -44,6 +52,14 @@ const ExpandedProductCard: React.FC<ExpandedProductCardProps> = ({ id, ref }) =>
         </div>
         <p className="text-left text-xs text-black mb-1"><span className='font-semibold'>Description:</span> {product.description}</p>
         <p className="text-left text-xs text-black mb-1"><span className='font-semibold'>Category:</span> {product.category}</p>
+        {product.author && (
+          <p className="text-left text-black mb-1 text-xs">
+            <span className='font-semibold'>Author: </span> 
+            <a href={product.authorLink} target="_blank" rel="noopener noreferrer" className='text-blue-800'>
+              {product.author}
+            </a>
+          </p>
+        )}
       </div>
     </div>
     </>
