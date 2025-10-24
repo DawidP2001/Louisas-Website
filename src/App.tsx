@@ -9,6 +9,7 @@
  * - look for silly playful fonts
  * - add sound effects maybe
  * - Update Readme
+ * - Fix a bug on mobile when you scroll to fast it glitches the layout
  */
 import './App.css'
 import Title from './components/Title';
@@ -23,8 +24,8 @@ function App() {
     <main className='min-h-screen max-w-screen min-w-screen'>
       {/**bg-[#FEF7CD] */}
       <div id="contents" className="display:inline-flex sm:max-w-3xl mx-auto p-4 my-2 bg-white dashed relative" >
-        <img src="./animations/yarn.png" alt="Pattern" className="text-black w-12 sm:w-28 absolute top-6 sm:top-4 right-4 spin-left rock-back-and-forth " />
-        <img src="./animations/yarn.png" alt="Pattern" className="text-black w-12 sm:w-28 absolute top-6 sm:top-4 left-4 spin-right rock-back-and-forth " />
+        <img src="./animations/yarn.png" alt="Pattern" className="text-black w-12 sm:w-28 absolute top-6 sm:top-4 right-4 rock-back-and-forth-left " />
+        <img src="./animations/yarn.png" alt="Pattern" className="text-black w-12 sm:w-28 absolute top-6 sm:top-4 left-4 rock-back-and-forth " />
         <Title 
             title="caillougarage" 
             subtitle="Discover my Knit and crochet patterns and more!" 
